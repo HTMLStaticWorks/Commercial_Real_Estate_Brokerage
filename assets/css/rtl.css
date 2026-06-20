@@ -1,0 +1,41 @@
+/* ==========================================================================
+   RTL Theme Modifications
+   ========================================================================== */
+
+[dir="rtl"] {
+  text-align: right;
+}
+
+[dir="rtl"] .back-to-top {
+  right: auto;
+  left: 30px;
+}
+
+[dir="rtl"] .footer-link:hover {
+  padding-left: 0;
+  padding-right: 5px;
+}
+
+[dir="rtl"] .newsletter-input {
+  border-radius: 0 var(--border-radius-card) var(--border-radius-card) 0;
+}
+
+[dir="rtl"] .newsletter-btn {
+  border-radius: var(--border-radius-card) 0 0 var(--border-radius-card);
+}
+
+[dir="rtl"] .text-start {
+  text-align: right !important;
+}
+
+[dir="rtl"] .text-end {
+  text-align: left !important;
+}
+
+[dir="rtl"] .float-start {
+  float: right !important;
+}
+
+[dir="rtl"] .float-end {
+  float: left !important;
+}

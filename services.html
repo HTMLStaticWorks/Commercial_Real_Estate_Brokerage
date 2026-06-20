@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services | Vertex Commercial Real Estate</title>
+  <meta name="description" content="Explore Vertex Commercial's investment advisory, valuation services, tenant representation, and interactive cap rate calculators.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏢</text></svg>">
+  
+  <!-- Bootstrap 5 CSS via CDN -->
+  <link id="bootstrap-cdn" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+  <!-- Header / Navbar -->
+  <nav class="navbar navbar-expand-xl navbar-custom fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <svg width="180" height="50" viewBox="0 0 180 50" fill="none" xmlns="http://www.w3.org/2000/svg" class="align-middle" style="color: var(--primary-color);">
+          <path d="M10 40V15L22 5L34 15V40" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+          <path d="M16 40V22H28V40" stroke="currentColor" stroke-width="2"/>
+          <path d="M22 10V15" stroke="currentColor" stroke-width="2"/>
+          <line x1="5" y1="40" x2="39" y2="40" stroke="currentColor" stroke-width="2.5"/>
+          <text x="46" y="28" font-family="'Outfit', sans-serif" font-weight="700" font-size="21" fill="currentColor">VERTEX</text>
+          <text x="46" y="42" font-family="'Outfit', sans-serif" font-weight="500" font-size="10" fill="currentColor" letter-spacing="1.5">COMMERCIAL</text>
+        </svg>
+      </a>
+
+      <div class="d-flex align-items-center order-xl-3 gap-2">
+        <button id="theme-toggle" class="btn btn-outline-custom btn-custom py-2 px-3" title="Toggle Theme" aria-label="Toggle Theme">
+          <i class="fa-solid fa-moon fs-5"></i>
+        </button>
+        <button id="rtl-toggle" class="btn btn-outline-custom btn-custom py-2 px-3" title="Toggle RTL" aria-label="Toggle RTL">
+          <span>RTL</span>
+        </button>
+        <a href="login.html" class="btn btn-outline-custom btn-custom d-none d-sm-inline-block py-2 px-3">Login</a>
+        <a href="dashboard-user-profile.html" class="btn btn-primary-custom btn-custom d-none d-sm-inline-block py-2 px-3">Dashboard</a>
+        
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header border-bottom">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-center flex-grow-1 pe-3 gap-1">
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="home-2.html">Home2</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="pricing.html">Pricing</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="gallery.html">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="blog.html">Insights</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="contact.html">Contact</a></li>
+          </ul>
+          <div class="d-sm-none d-flex flex-column gap-2 mt-3">
+            <a href="login.html" class="btn btn-outline-custom w-100 py-2">Login</a>
+            <a href="dashboard-user-profile.html" class="btn btn-primary-custom w-100 py-2">Dashboard</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-inner" style="background-image: url('https://picsum.photos/id/1082/1200/500');">
+    <div class="hero-inner-overlay"></div>
+    <div class="container hero-inner-content">
+      <h1>Advisory Services</h1>
+      <p class="lead max-w-2xl mx-auto">Providing transaction precision, custom modeling, and strategic sourcing.</p>
+    </div>
+  </section>
+
+  <!-- Services Grid Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2>Commercial Asset Services</h2>
+        <p class="text-muted">A comprehensive platform of services tailored for sophisticated capital allocators.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Service 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card-custom">
+            <div class="card-custom-body">
+              <i class="fa-solid fa-hotel text-secondary-custom fs-2 mb-3" style="color: var(--secondary-color);"></i>
+              <h3 class="h4 mb-2">Capital Markets Sourcing</h3>
+              <p>Off-market transaction sourcing of prime warehouse and logistics infrastructure assets.</p>
+              <div class="card-custom-cta">
+                <a href="service-details.html" class="btn btn-outline-custom btn-custom w-100">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card-custom">
+            <div class="card-custom-body">
+              <i class="fa-solid fa-briefcase text-secondary-custom fs-2 mb-3" style="color: var(--secondary-color);"></i>
+              <h3 class="h4 mb-2">Buy-Side Advisory</h3>
+              <p>Valuation models, local regulation analysis, and yield optimization modeling for family offices.</p>
+              <div class="card-custom-cta">
+                <a href="service-details.html" class="btn btn-outline-custom btn-custom w-100">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card-custom">
+            <div class="card-custom-body">
+              <i class="fa-solid fa-folder-open text-secondary-custom fs-2 mb-3" style="color: var(--secondary-color);"></i>
+              <h3 class="h4 mb-2">Due Diligence Rooms</h3>
+              <p>Secure, virtual spaces with bank-grade encryption to manage rent rolls, leases, and reports.</p>
+              <div class="card-custom-cta">
+                <a href="service-details.html" class="btn btn-outline-custom btn-custom w-100">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card-custom">
+            <div class="card-custom-body">
+              <i class="fa-solid fa-calculator text-secondary-custom fs-2 mb-3" style="color: var(--secondary-color);"></i>
+              <h3 class="h4 mb-2">Valuation & Yield Modeling</h3>
+              <p>Rigorous DCF evaluations under dynamic rent and cap rate scenarios.</p>
+              <div class="card-custom-cta">
+                <a href="service-details.html" class="btn btn-outline-custom btn-custom w-100">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card-custom">
+            <div class="card-custom-body">
+              <i class="fa-solid fa-signature text-secondary-custom fs-2 mb-3" style="color: var(--secondary-color);"></i>
+              <h3 class="h4 mb-2">Tenant Representation</h3>
+              <p>Lease restructures and relocation consultations for major corporate headquarters.</p>
+              <div class="card-custom-cta">
+                <a href="service-details.html" class="btn btn-outline-custom btn-custom w-100">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card-custom">
+            <div class="card-custom-body">
+              <i class="fa-solid fa-gears text-secondary-custom fs-2 mb-3" style="color: var(--secondary-color);"></i>
+              <h3 class="h4 mb-2">Asset Management</h3>
+              <p>Strategic CAPEX placement and property management oversight to drive net operating income (NOI).</p>
+              <div class="card-custom-cta">
+                <a href="service-details.html" class="btn btn-outline-custom btn-custom w-100">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Cap Rate Calculator Section -->
+  <section class="py-5 bg-offset">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-5">
+          <h2>Interactive Cap Rate Estimator</h2>
+          <p class="text-muted">Quickly estimate Cap Rate or Purchase Value by inputting expected NOI and purchase conditions.</p>
+          <div class="card p-4 border-0 shadow-sm rounded-3">
+            <form id="cap-estimator-form">
+              <div class="mb-3">
+                <label for="calc-noi" class="form-label font-weight-bold">Net Operating Income (NOI) ($)</label>
+                <input type="number" class="form-control" id="calc-noi" value="750000" placeholder="e.g. 750000" required>
+              </div>
+              <div class="mb-3">
+                <label for="calc-price" class="form-label font-weight-bold">Acquisition Price ($)</label>
+                <input type="number" class="form-control" id="calc-price" value="15000000" placeholder="e.g. 15000000" required>
+              </div>
+              <button type="button" onclick="calculateCapRate()" class="btn btn-primary-custom btn-custom w-100">Calculate Cap Rate</button>
+            </form>
+          </div>
+        </div>
+        <div class="col-lg-7 text-center">
+          <div class="p-5 bg-white border rounded shadow-sm">
+            <h4 class="text-muted">Estimated Yield</h4>
+            <div class="display-1 my-3 text-secondary-custom font-weight-bold" id="cap-rate-output" style="color: var(--secondary-color); font-size: 5rem;">5.00%</div>
+            <p class="lead" id="cap-summary-text">A net income of $750,000 against a $15,000,000 asset price represents a 5.00% capitalization rate.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Interactive Service Inquiry / Advisory Brief Builder -->
+  <section class="py-5 bg-offset border-top">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2>Build Your Advisory Brief</h2>
+        <p class="text-muted">Select your asset preferences and investment parameters to match with a dedicated commercial advisor.</p>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card p-4 border-0 shadow-sm rounded-3">
+            <form id="brief-builder-form" class="row g-3 needs-validation" novalidate>
+              <div class="col-md-6">
+                <label for="brief-asset" class="form-label font-weight-bold">Primary Asset Focus</label>
+                <select class="form-select" id="brief-asset" required>
+                  <option value="" selected disabled>Choose asset class...</option>
+                  <option value="logistics">Logistics / Distribution Hubs</option>
+                  <option value="office">Grade-A Corporate Offices</option>
+                  <option value="retail">Metropolitan Retail Blocks</option>
+                  <option value="multifamily">Multi-Family Institutional Portfolios</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label for="brief-allocation" class="form-label font-weight-bold">Target Capital Allocation</label>
+                <select class="form-select" id="brief-allocation" required>
+                  <option value="" selected disabled>Choose range...</option>
+                  <option value="tier1">$5M - $15M</option>
+                  <option value="tier2">$15M - $50M</option>
+                  <option value="tier3">$50M - $150M</option>
+                  <option value="tier4">$150M+</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label for="brief-region" class="form-label font-weight-bold">Target Region</label>
+                <select class="form-select" id="brief-region" required>
+                  <option value="" selected disabled>Choose region...</option>
+                  <option value="na">North America</option>
+                  <option value="eu">European Union</option>
+                  <option value="uk">United Kingdom</option>
+                  <option value="apac">Asia Pacific</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label for="brief-horizon" class="form-label font-weight-bold">Investment Horizon</label>
+                <select class="form-select" id="brief-horizon" required>
+                  <option value="" selected disabled>Choose duration...</option>
+                  <option value="short">3 - 5 Years (Value-Add)</option>
+                  <option value="medium">5 - 10 Years (Core Yield)</option>
+                  <option value="long">10+ Years (Sovereign / Pension)</option>
+                </select>
+              </div>
+              <div class="col-12 text-center mt-4">
+                <button type="submit" class="btn btn-secondary-custom btn-custom px-4 py-2">Submit Investment Brief</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer-custom">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="logo-footer mb-3 text-primary-custom" style="color: var(--primary-color);">
+            <svg width="180" height="50" viewBox="0 0 180 50" fill="none" xmlns="http://www.w3.org/2000/svg" class="align-middle">
+              <path d="M10 40V15L22 5L34 15V40" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+              <path d="M16 40V22H28V40" stroke="currentColor" stroke-width="2"/>
+              <path d="M22 10V15" stroke="currentColor" stroke-width="2"/>
+              <line x1="5" y1="40" x2="39" y2="40" stroke="currentColor" stroke-width="2.5"/>
+              <text x="46" y="28" font-family="'Outfit', sans-serif" font-weight="700" font-size="21" fill="currentColor">VERTEX</text>
+              <text x="46" y="42" font-family="'Outfit', sans-serif" font-weight="500" font-size="10" fill="currentColor" letter-spacing="1.5">COMMERCIAL</text>
+            </svg>
+          </div>
+          <p class="text-muted">Pioneering institutional commercial real estate transactions with institutional security and digital deal management.</p>
+          <div class="d-flex gap-3 mt-3 footer-custom-social-links">
+            <a href="#" class="text-muted fs-5"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#" class="text-muted fs-5"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="text-muted fs-5"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="text-muted fs-5"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3">
+          <h4 class="footer-links-title">Quick Links</h4>
+          <a href="index.html" class="footer-link">Home</a>
+          <a href="about.html" class="footer-link">About Us</a>
+          <a href="services.html" class="footer-link">Advisory Services</a>
+          <a href="pricing.html" class="footer-link">Pricing Models</a>
+          <a href="gallery.html" class="footer-link">Case Gallery</a>
+        </div>
+
+        <div class="col-lg-2 col-md-3">
+          <h4 class="footer-links-title">Resources</h4>
+          <a href="blog.html" class="footer-link">Market Reports</a>
+          <a href="contact.html#booking" class="footer-link">Broker Meeting</a>
+          <a href="login.html" class="footer-link">Investor Portal</a>
+          <a href="contact.html" class="footer-link">Get in Touch</a>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <h4 class="footer-links-title">Market Newsletter</h4>
+          <p class="text-muted">Receive monthly reports on yields, cap rates, and off-market commercial assets.</p>
+          <form class="d-flex needs-validation" novalidate>
+            <input type="email" class="form-control newsletter-input" placeholder="Advisor email" required>
+            <button type="submit" class="btn btn-primary-custom newsletter-btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <hr class="my-4">
+
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start">
+          <p class="mb-0 text-muted">&copy; 2026 Vertex Commercial. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
+          <a href="#" class="text-muted me-3">Privacy Policy</a>
+          <a href="#" class="text-muted">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to Top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    function calculateCapRate() {
+      const noi = parseFloat(document.getElementById('calc-noi').value);
+      const price = parseFloat(document.getElementById('calc-price').value);
+      const output = document.getElementById('cap-rate-output');
+      const text = document.getElementById('cap-summary-text');
+
+      if (noi > 0 && price > 0) {
+        const cap = (noi / price) * 100;
+        output.innerText = cap.toFixed(2) + '%';
+        text.innerText = `A net operating income of $${noi.toLocaleString()} against a $${price.toLocaleString()} acquisition price represents a ${cap.toFixed(2)}% capitalization rate.`;
+      } else {
+        alert('Please enter values greater than zero.');
+      }
+    }
+  </script>
+</body>
+</html>

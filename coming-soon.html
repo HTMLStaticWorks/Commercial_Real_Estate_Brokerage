@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coming Soon | Vertex Commercial Real Estate</title>
+  <meta name="description" content="We are launching a new portfolio pipeline system. Sign up to get notified.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏢</text></svg>">
+  
+  <!-- Bootstrap 5 CSS via CDN -->
+  <link id="bootstrap-cdn" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+  <!-- Header / Navbar -->
+  <nav class="navbar navbar-expand-xl navbar-custom fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <svg width="180" height="50" viewBox="0 0 180 50" fill="none" xmlns="http://www.w3.org/2000/svg" class="align-middle" style="color: var(--primary-color);">
+          <path d="M10 40V15L22 5L34 15V40" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+          <path d="M16 40V22H28V40" stroke="currentColor" stroke-width="2"/>
+          <path d="M22 10V15" stroke="currentColor" stroke-width="2"/>
+          <line x1="5" y1="40" x2="39" y2="40" stroke="currentColor" stroke-width="2.5"/>
+          <text x="46" y="28" font-family="'Outfit', sans-serif" font-weight="700" font-size="21" fill="currentColor">VERTEX</text>
+          <text x="46" y="42" font-family="'Outfit', sans-serif" font-weight="500" font-size="10" fill="currentColor" letter-spacing="1.5">COMMERCIAL</text>
+        </svg>
+      </a>
+
+      <div class="d-flex align-items-center order-xl-3 gap-2">
+        <button id="theme-toggle" class="btn btn-outline-custom btn-custom py-2 px-3" title="Toggle Theme" aria-label="Toggle Theme">
+          <i class="fa-solid fa-moon fs-5"></i>
+        </button>
+        <button id="rtl-toggle" class="btn btn-outline-custom btn-custom py-2 px-3" title="Toggle RTL" aria-label="Toggle RTL">
+          <span>RTL</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Countdown Teaser Section -->
+  <section class="py-5 my-5 text-center">
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <span class="text-uppercase tracking-wider font-weight-bold text-secondary-custom mb-3 d-block" style="color: var(--secondary-color); letter-spacing: 2px;">SYSTEM UPDATE IN PROGRESS</span>
+          <h2 class="mb-4">APAC Logistics Pipeline Launch</h2>
+          <p class="lead text-muted mb-5">
+            We are indexing new deepwater port log hubs and logistics yards across Singapore, Sydney, and Tokyo.
+          </p>
+
+          <!-- Countdown Counter -->
+          <div class="row justify-content-center g-3 mb-5" id="countdown-timer">
+            <div class="col-3 col-sm-2">
+              <div class="p-3 bg-offset rounded border">
+                <h3 class="mb-0" id="days">24</h3>
+                <small class="text-muted">Days</small>
+              </div>
+            </div>
+            <div class="col-3 col-sm-2">
+              <div class="p-3 bg-offset rounded border">
+                <h3 class="mb-0" id="hours">18</h3>
+                <small class="text-muted">Hours</small>
+              </div>
+            </div>
+            <div class="col-3 col-sm-2">
+              <div class="p-3 bg-offset rounded border">
+                <h3 class="mb-0" id="minutes">45</h3>
+                <small class="text-muted">Mins</small>
+              </div>
+            </div>
+            <div class="col-3 col-sm-2">
+              <div class="p-3 bg-offset rounded border">
+                <h3 class="mb-0" id="seconds">12</h3>
+                <small class="text-muted">Secs</small>
+              </div>
+            </div>
+          </div>
+
+          <form class="d-flex needs-validation justify-content-center mx-auto" style="max-width: 500px;" novalidate>
+            <input type="email" class="form-control newsletter-input" placeholder="Notify me at corporate email" required>
+            <button type="submit" class="btn btn-primary-custom newsletter-btn">Notify Me</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer-custom">
+    <div class="container text-center">
+      <p class="mb-0 text-muted">&copy; 2026 Vertex Commercial. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Mock Countdown update
+    let d = 24, h = 18, m = 45, s = 12;
+    setInterval(() => {
+      s--;
+      if (s < 0) { s = 59; m--; }
+      if (m < 0) { m = 59; h--; }
+      if (h < 0) { h = 23; d--; }
+      document.getElementById('days').innerText = d;
+      document.getElementById('hours').innerText = h;
+      document.getElementById('minutes').innerText = m;
+      document.getElementById('seconds').innerText = s;
+    }, 1000);
+  </script>
+</body>
+</html>

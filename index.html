@@ -1,1 +1,510 @@
-Commercial_Real_Estate_Brokerage
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vertex Commercial | Institutional Real Estate Brokerage</title>
+  <meta name="description" content="Vertex Commercial is a premier commercial real estate brokerage serving institutional investors with listings, deal flow pipelines, and secure due diligence rooms.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏢</text></svg>">
+  
+  <!-- Bootstrap 5 CSS via CDN -->
+  <link id="bootstrap-cdn" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+  <!-- Header / Navbar -->
+  <nav class="navbar navbar-expand-xl navbar-custom fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <svg width="180" height="50" viewBox="0 0 180 50" fill="none" xmlns="http://www.w3.org/2000/svg" class="align-middle text-primary-custom" style="color: var(--primary-color);">
+          <path d="M10 40V15L22 5L34 15V40" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+          <path d="M16 40V22H28V40" stroke="currentColor" stroke-width="2"/>
+          <path d="M22 10V15" stroke="currentColor" stroke-width="2"/>
+          <line x1="5" y1="40" x2="39" y2="40" stroke="currentColor" stroke-width="2.5"/>
+          <text x="46" y="28" font-family="'Outfit', sans-serif" font-weight="700" font-size="21" fill="currentColor">VERTEX</text>
+          <text x="46" y="42" font-family="'Outfit', sans-serif" font-weight="500" font-size="10" fill="currentColor" letter-spacing="1.5">COMMERCIAL</text>
+        </svg>
+      </a>
+
+      <!-- Controls: Theme, RTL and Hamburger -->
+      <div class="d-flex align-items-center order-xl-3 gap-2">
+        <button id="theme-toggle" class="btn btn-outline-custom btn-custom py-2 px-3" title="Toggle Theme" aria-label="Toggle Theme">
+          <i class="fa-solid fa-moon fs-5"></i>
+        </button>
+        <button id="rtl-toggle" class="btn btn-outline-custom btn-custom py-2 px-3" title="Toggle RTL" aria-label="Toggle RTL">
+          <span>RTL</span>
+        </button>
+        <a href="login.html" class="btn btn-outline-custom btn-custom d-none d-sm-inline-block py-2 px-3">Login</a>
+        <a href="dashboard-user-profile.html" class="btn btn-primary-custom btn-custom d-none d-sm-inline-block py-2 px-3">Dashboard</a>
+        
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <!-- Navigation links via Offcanvas for screens < 1100px -->
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header border-bottom">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-center flex-grow-1 pe-3 gap-1">
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="home-2.html">Home2</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="pricing.html">Pricing</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="gallery.html">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="blog.html">Insights</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="contact.html">Contact</a></li>
+          </ul>
+          <!-- Mobile CTA Buttons inside drawer -->
+          <div class="d-sm-none d-flex flex-column gap-2 mt-3">
+            <a href="login.html" class="btn btn-outline-custom w-100 py-2">Login</a>
+            <a href="dashboard-user-profile.html" class="btn btn-primary-custom w-100 py-2">Dashboard</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section (Home 1 Layout) -->
+  <section class="hero-1">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10 col-xl-8">
+          <h1 class="mb-4">
+            <span class="d-block text-nowrap">Institutional Class</span>
+            <span class="d-block text-nowrap">Commercial Assets</span>
+          </h1>
+          <p class="lead text-muted mb-5">
+            Vertex Commercial advises family offices, institutions, and high-net-worth investors on prime logistics, prime offices, and retail transactions globally.
+          </p>
+          <div class="d-flex flex-wrap justify-content-center gap-3">
+            <a href="gallery.html" class="btn btn-custom btn-primary-custom">View Transaction Gallery</a>
+            <a href="contact.html#booking" class="btn btn-custom btn-secondary-custom">Request Advisor Call</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Property Search panel (Direct integration) -->
+  <section class="container mb-5">
+    <div class="search-panel">
+      <form class="row g-3 align-items-end" id="search-listings-form">
+        <div class="col-md-4">
+          <label for="search-keyword" class="form-label font-weight-bold">Property Keyword</label>
+          <input type="text" class="form-control" id="search-keyword" placeholder="e.g. Logistics Hub, HQ Office">
+        </div>
+        <div class="col-md-3">
+          <label for="search-type" class="form-label font-weight-bold">Asset Type</label>
+          <select class="form-select" id="search-type">
+            <option value="">All Asset Classes</option>
+            <option value="office">Office Buildings</option>
+            <option value="logistics">Logistics & Industrial</option>
+            <option value="retail">Retail Centers</option>
+            <option value="multifamily">Multi-Family Portfolios</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <label for="search-region" class="form-label font-weight-bold">Target Region</label>
+          <select class="form-select" id="search-region">
+            <option value="">Global Coverage</option>
+            <option value="na">North America</option>
+            <option value="eu">European Union</option>
+            <option value="apac">Asia Pacific</option>
+          </select>
+        </div>
+        <div class="col-md-2">
+          <button type="submit" class="btn btn-primary-custom btn-custom w-100 py-2"><i class="fa-solid fa-magnifying-glass me-2"></i>Filter</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Featured Listings Section -->
+  <section class="py-5 bg-offset">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="mb-3">Featured Core Listings</h2>
+        <p class="text-muted">High-yield commercial properties with comprehensive due diligence ready for verification.</p>
+      </div>
+      
+      <div class="row g-4">
+        <!-- Listing 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card-custom">
+            <div class="card-custom-img-wrapper">
+              <img src="https://picsum.photos/id/1025/600/400" alt="Logistics Center" class="card-custom-img">
+            </div>
+            <div class="card-custom-body">
+              <h3 class="mb-2">Prime logistics hub</h3>
+              <p class="text-muted mb-3"><i class="fa-solid fa-location-dot me-2"></i>Rotterdam, Netherlands</p>
+              <div class="d-flex justify-content-between w-100 mb-4 border-bottom pb-2">
+                <span>Cap Rate: <strong>5.4%</strong></span>
+                <span>Area: <strong>45,000 m²</strong></span>
+              </div>
+              <p class="text-start">Fully leased warehouse to AAA tenant with a 15-year triple-net commitment.</p>
+              <div class="card-custom-cta">
+                <a href="service-details.html" class="btn btn-secondary-custom btn-custom w-100">Access Deal Room</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Listing 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card-custom">
+            <div class="card-custom-img-wrapper">
+              <img src="https://picsum.photos/id/1029/600/400" alt="Office Building" class="card-custom-img">
+            </div>
+            <div class="card-custom-body">
+              <h3 class="mb-2">Downtown office complex</h3>
+              <p class="text-muted mb-3"><i class="fa-solid fa-location-dot me-2"></i>Frankfurt, Germany</p>
+              <div class="d-flex justify-content-between w-100 mb-4 border-bottom pb-2">
+                <span>Cap Rate: <strong>4.8%</strong></span>
+                <span>Area: <strong>18,500 m²</strong></span>
+              </div>
+              <p class="text-start">Class A skyscraper in financial center. LEED Platinum certification and high occupancy.</p>
+              <div class="card-custom-cta">
+                <a href="service-details.html" class="btn btn-secondary-custom btn-custom w-100">Access Deal Room</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Listing 3 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card-custom">
+            <div class="card-custom-img-wrapper">
+              <img src="https://picsum.photos/id/1031/600/400" alt="Retail District" class="card-custom-img">
+            </div>
+            <div class="card-custom-body">
+              <h3 class="mb-2">Metropolitan retail block</h3>
+              <p class="text-muted mb-3"><i class="fa-solid fa-location-dot me-2"></i>London, United Kingdom</p>
+              <div class="d-flex justify-content-between w-100 mb-4 border-bottom pb-2">
+                <span>Cap Rate: <strong>6.1%</strong></span>
+                <span>Area: <strong>9,200 m²</strong></span>
+              </div>
+              <p class="text-start">High footfall street retail asset with mixed-use value-add potential.</p>
+              <div class="card-custom-cta">
+                <a href="service-details.html" class="btn btn-secondary-custom btn-custom w-100">Access Deal Room</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Deal Pipeline Preview / Process Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="mb-3">Our Professional Deal Pipeline</h2>
+        <p class="text-muted">How we structure commercial transactions from sourcing to final close.</p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="pipeline-track py-3">
+            <div class="pipeline-step active">
+              <div class="pipeline-dot">1</div>
+              <h4 class="h6 mt-2">Sourcing</h4>
+            </div>
+            <div class="pipeline-step">
+              <div class="pipeline-dot">2</div>
+              <h4 class="h6 mt-2">Due Diligence</h4>
+            </div>
+            <div class="pipeline-step">
+              <div class="pipeline-dot">3</div>
+              <h4 class="h6 mt-2">LOI Phase</h4>
+            </div>
+            <div class="pipeline-step">
+              <div class="pipeline-dot">4</div>
+              <h4 class="h6 mt-2">Underwriting</h4>
+            </div>
+            <div class="pipeline-step">
+              <div class="pipeline-dot">5</div>
+              <h4 class="h6 mt-2">Closing</h4>
+            </div>
+          </div>
+          
+          <div class="text-center mt-4">
+            <p class="text-muted">Register an account to tracking investments live inside our exclusive pipeline dashboard.</p>
+            <a href="register.html" class="btn btn-primary-custom btn-custom">Create Investor Account</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="py-5 bg-offset">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="mb-3">Trusted by Global Capital</h2>
+        <p class="text-muted">What leading family offices and institutional fund managers say about Vertex Commercial.</p>
+      </div>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-6 col-lg-5">
+          <div class="card p-4 border-0 shadow-sm rounded-3">
+            <p class="fst-italic text-muted">"Vertex Commercial provided impeccable underwriting and advisory. Their secure document room streamlined the entire acquisition of our logistics portfolio."</p>
+            <hr>
+            <div class="d-flex align-items-center">
+              <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 48px; height: 48px;">
+                <strong class="fs-5">JM</strong>
+              </div>
+              <div class="ms-3">
+                <h5 class="h6 mb-0">Jean-Marc Meyer</h5>
+                <small class="text-muted">Managing Director, Alpstone Capital</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-5">
+          <div class="card p-4 border-0 shadow-sm rounded-3">
+            <p class="fst-italic text-muted">"The real-time deal pipeline is revolutionary. I could track our broker meetings, requests, and diligence status on my mobile instantly."</p>
+            <hr>
+            <div class="d-flex align-items-center">
+              <div class="bg-secondary text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 48px; height: 48px;">
+                <strong class="fs-5">AH</strong>
+              </div>
+              <div class="ms-3">
+                <h5 class="h6 mb-0">Audrey H.</h5>
+                <small class="text-muted">Chief Investment Officer, H.G. Family Office</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Investment Calculator Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="mb-3">Deal Yield Calculator</h2>
+        <p class="text-muted">Quickly estimate your potential Net Operating Income and Cap Rate.</p>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card p-4 border-0 shadow-sm rounded-3 bg-offset">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="calc-price" class="form-label font-weight-bold">Purchase Price ($)</label>
+                <input type="number" class="form-control" id="calc-price" value="10000000" step="100000">
+              </div>
+              <div class="col-md-6">
+                <label for="calc-revenue" class="form-label font-weight-bold">Annual Gross Rent ($)</label>
+                <input type="number" class="form-control" id="calc-revenue" value="750000" step="10000">
+              </div>
+              <div class="col-md-6">
+                <label for="calc-expenses" class="form-label font-weight-bold">Annual Operating Expenses ($)</label>
+                <input type="number" class="form-control" id="calc-expenses" value="150000" step="10000">
+              </div>
+              <div class="col-md-6 d-flex align-items-end">
+                <button type="button" id="btn-calculate" class="btn btn-primary-custom btn-custom w-100 py-2">Calculate Yield</button>
+              </div>
+            </div>
+            <div class="row mt-4 text-center border-top pt-3">
+              <div class="col-6">
+                <h4 class="h5 text-muted">Estimated NOI</h4>
+                <p class="h3 text-primary-custom" id="calc-noi-val">$600,000</p>
+              </div>
+              <div class="col-6">
+                <h4 class="h5 text-muted">Cap Rate</h4>
+                <p class="h3 text-secondary-custom" id="calc-cap-val">6.00%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Market Intelligence Section -->
+  <section class="py-5 bg-offset">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="mb-3">Latest Market Intelligence</h2>
+        <p class="text-muted">Read our latest analyst notes on yields, logistics hubs, and office trends.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card-custom h-100">
+            <div class="card-custom-body d-flex flex-column h-100">
+              <span class="text-uppercase text-secondary-custom small font-weight-bold mb-2 d-block" style="letter-spacing: 1px;">Office Market</span>
+              <h3 class="h5 mb-3">Green Premium Trends</h3>
+              <p class="text-muted small">LEED Platinum buildings command an average rent premium of 8.4% across European finance centers.</p>
+              <div class="mt-auto pt-3">
+                <a href="blog-details.html" class="text-primary-custom text-decoration-none font-weight-bold">Read Note <i class="fa-solid fa-arrow-right ms-1"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card-custom h-100">
+            <div class="card-custom-body d-flex flex-column h-100">
+              <span class="text-uppercase text-secondary-custom small font-weight-bold mb-2 d-block" style="letter-spacing: 1px;">Logistics</span>
+              <h3 class="h5 mb-3">Nearshoring Infrastructure</h3>
+              <p class="text-muted small">Port cities show record vacancy lows as manufacturers shift supply chains closer to target markets.</p>
+              <div class="mt-auto pt-3">
+                <a href="blog-details.html" class="text-primary-custom text-decoration-none font-weight-bold">Read Note <i class="fa-solid fa-arrow-right ms-1"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card-custom h-100">
+            <div class="card-custom-body d-flex flex-column h-100">
+              <span class="text-uppercase text-secondary-custom small font-weight-bold mb-2 d-block" style="letter-spacing: 1px;">Finance</span>
+              <h3 class="h5 mb-3">Cap Rate Projections</h3>
+              <p class="text-muted small">An inside look into commercial loan refinancing and cap rate forecasts for Q3/Q4.</p>
+              <div class="mt-auto pt-3">
+                <a href="blog-details.html" class="text-primary-custom text-decoration-none font-weight-bold">Read Note <i class="fa-solid fa-arrow-right ms-1"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Institutional Partners Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="mb-2 h4 text-muted text-uppercase" style="letter-spacing: 2px;">Supported Institutional Networks</h2>
+      </div>
+      <div class="row g-4 align-items-center justify-content-center text-center opacity-75">
+        <div class="col-6 col-sm-4 col-md-2">
+          <span class="fs-5 font-weight-bold text-muted"><i class="fa-solid fa-building-columns me-2"></i>REIT Capital</span>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2">
+          <span class="fs-5 font-weight-bold text-muted"><i class="fa-solid fa-vault me-2"></i>Global Trust</span>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2">
+          <span class="fs-5 font-weight-bold text-muted"><i class="fa-solid fa-landmark me-2"></i>Prime Fund</span>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2">
+          <span class="fs-5 font-weight-bold text-muted"><i class="fa-solid fa-shield-halved me-2"></i>SafeGuard</span>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2">
+          <span class="fs-5 font-weight-bold text-muted"><i class="fa-solid fa-city me-2"></i>Metro Group</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer-custom">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="logo-footer mb-3 text-primary-custom" style="color: var(--primary-color);">
+            <svg width="180" height="50" viewBox="0 0 180 50" fill="none" xmlns="http://www.w3.org/2000/svg" class="align-middle">
+              <path d="M10 40V15L22 5L34 15V40" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+              <path d="M16 40V22H28V40" stroke="currentColor" stroke-width="2"/>
+              <path d="M22 10V15" stroke="currentColor" stroke-width="2"/>
+              <line x1="5" y1="40" x2="39" y2="40" stroke="currentColor" stroke-width="2.5"/>
+              <text x="46" y="28" font-family="'Outfit', sans-serif" font-weight="700" font-size="21" fill="currentColor">VERTEX</text>
+              <text x="46" y="42" font-family="'Outfit', sans-serif" font-weight="500" font-size="10" fill="currentColor" letter-spacing="1.5">COMMERCIAL</text>
+            </svg>
+          </div>
+          <p class="text-muted">Pioneering institutional commercial real estate transactions with institutional security and digital deal management.</p>
+          <div class="d-flex gap-3 mt-3 footer-custom-social-links">
+            <a href="#" class="text-muted fs-5"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#" class="text-muted fs-5"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="text-muted fs-5"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="text-muted fs-5"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3">
+          <h4 class="footer-links-title">Quick Links</h4>
+          <a href="index.html" class="footer-link">Home</a>
+          <a href="about.html" class="footer-link">About Us</a>
+          <a href="services.html" class="footer-link">Advisory Services</a>
+          <a href="pricing.html" class="footer-link">Pricing Models</a>
+          <a href="gallery.html" class="footer-link">Case Gallery</a>
+        </div>
+
+        <div class="col-lg-2 col-md-3">
+          <h4 class="footer-links-title">Resources</h4>
+          <a href="blog.html" class="footer-link">Market Reports</a>
+          <a href="contact.html#booking" class="footer-link">Broker Meeting</a>
+          <a href="login.html" class="footer-link">Investor Portal</a>
+          <a href="contact.html" class="footer-link">Get in Touch</a>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <h4 class="footer-links-title">Market Newsletter</h4>
+          <p class="text-muted">Receive monthly reports on yields, cap rates, and off-market commercial assets.</p>
+          <form class="d-flex needs-validation" novalidate>
+            <input type="email" class="form-control newsletter-input" placeholder="Advisor email" required>
+            <button type="submit" class="btn btn-primary-custom newsletter-btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <hr class="my-4">
+
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start">
+          <p class="mb-0 text-muted">&copy; 2026 Vertex Commercial. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
+          <a href="#" class="text-muted me-3">Privacy Policy</a>
+          <a href="#" class="text-muted">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to Top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <!-- Bootstrap Bundle with Popper JS via CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Global JS -->
+  <script src="assets/js/main.js"></script>
+  
+  <!-- Yield Calculator Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const calcBtn = document.getElementById('btn-calculate');
+      if (calcBtn) {
+        calcBtn.addEventListener('click', () => {
+          const price = parseFloat(document.getElementById('calc-price').value) || 0;
+          const gross = parseFloat(document.getElementById('calc-revenue').value) || 0;
+          const expenses = parseFloat(document.getElementById('calc-expenses').value) || 0;
+          
+          const noi = gross - expenses;
+          let capRate = 0;
+          if (price > 0) {
+            capRate = (noi / price) * 100;
+          }
+          
+          document.getElementById('calc-noi-val').innerText = '$' + noi.toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 0});
+          document.getElementById('calc-cap-val').innerText = capRate.toFixed(2) + '%';
+        });
+      }
+    });
+  </script>
+</body>
+</html>

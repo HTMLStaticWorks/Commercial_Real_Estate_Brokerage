@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transaction Gallery | Vertex Commercial Real Estate</title>
+  <meta name="description" content="Explore Vertex Commercial's transaction gallery showcasing recently closed retail, office, and logistics deals.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏢</text></svg>">
+  
+  <!-- Bootstrap 5 CSS via CDN -->
+  <link id="bootstrap-cdn" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+  <!-- Header / Navbar -->
+  <nav class="navbar navbar-expand-xl navbar-custom fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <svg width="180" height="50" viewBox="0 0 180 50" fill="none" xmlns="http://www.w3.org/2000/svg" class="align-middle" style="color: var(--primary-color);">
+          <path d="M10 40V15L22 5L34 15V40" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+          <path d="M16 40V22H28V40" stroke="currentColor" stroke-width="2"/>
+          <path d="M22 10V15" stroke="currentColor" stroke-width="2"/>
+          <line x1="5" y1="40" x2="39" y2="40" stroke="currentColor" stroke-width="2.5"/>
+          <text x="46" y="28" font-family="'Outfit', sans-serif" font-weight="700" font-size="21" fill="currentColor">VERTEX</text>
+          <text x="46" y="42" font-family="'Outfit', sans-serif" font-weight="500" font-size="10" fill="currentColor" letter-spacing="1.5">COMMERCIAL</text>
+        </svg>
+      </a>
+
+      <div class="d-flex align-items-center order-xl-3 gap-2">
+        <button id="theme-toggle" class="btn btn-outline-custom btn-custom py-2 px-3" title="Toggle Theme" aria-label="Toggle Theme">
+          <i class="fa-solid fa-moon fs-5"></i>
+        </button>
+        <button id="rtl-toggle" class="btn btn-outline-custom btn-custom py-2 px-3" title="Toggle RTL" aria-label="Toggle RTL">
+          <span>RTL</span>
+        </button>
+        <a href="login.html" class="btn btn-outline-custom btn-custom d-none d-sm-inline-block py-2 px-3">Login</a>
+        <a href="dashboard-user-profile.html" class="btn btn-primary-custom btn-custom d-none d-sm-inline-block py-2 px-3">Dashboard</a>
+        
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header border-bottom">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-center flex-grow-1 pe-3 gap-1">
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="home-2.html">Home2</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="pricing.html">Pricing</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="gallery.html">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="blog.html">Insights</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="contact.html">Contact</a></li>
+          </ul>
+          <div class="d-sm-none d-flex flex-column gap-2 mt-3">
+            <a href="login.html" class="btn btn-outline-custom w-100 py-2">Login</a>
+            <a href="dashboard-user-profile.html" class="btn btn-primary-custom w-100 py-2">Dashboard</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-inner" style="background-image: url('https://picsum.photos/id/1069/1200/500');">
+    <div class="hero-inner-overlay"></div>
+    <div class="container hero-inner-content">
+      <h1>Closed Transactions</h1>
+      <p class="lead max-w-2xl mx-auto">Showcasing major assets sourced, underwritten, and closed by our advisors.</p>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <div class="d-inline-flex gap-2 flex-wrap bg-offset p-2 rounded-3 border">
+          <button class="btn btn-primary-custom btn-custom py-2 px-3 filter-btn" data-filter="all">All Sectors</button>
+          <button class="btn btn-outline-custom btn-custom py-2 px-3 border-0 filter-btn" data-filter="logistics">Logistics</button>
+          <button class="btn btn-outline-custom btn-custom py-2 px-3 border-0 filter-btn" data-filter="office">Office</button>
+          <button class="btn btn-outline-custom btn-custom py-2 px-3 border-0 filter-btn" data-filter="retail">Retail</button>
+        </div>
+      </div>
+
+      <div class="row g-4" id="gallery-grid">
+        <!-- Item 1 -->
+        <div class="col-md-6 col-lg-4 gallery-item" data-category="logistics">
+          <div class="card-custom">
+            <div class="card-custom-img-wrapper">
+              <img src="https://picsum.photos/id/1050/600/400" alt="Logistics 1" class="card-custom-img">
+            </div>
+            <div class="card-custom-body">
+              <span class="badge bg-secondary mb-2" style="background-color: var(--secondary-color) !important;">LOGISTICS</span>
+              <h3 class="h4 mb-2">EuroPort Warehousing</h3>
+              <p class="text-muted"><i class="fa-solid fa-location-dot me-2"></i>Rotterdam, NL</p>
+              <div class="card-custom-cta">
+                <a href="service-details.html" class="btn btn-outline-custom btn-custom w-100">Review Diligence</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="col-md-6 col-lg-4 gallery-item" data-category="office">
+          <div class="card-custom">
+            <div class="card-custom-img-wrapper">
+              <img src="https://picsum.photos/id/1043/600/400" alt="Office 1" class="card-custom-img">
+            </div>
+            <div class="card-custom-body">
+              <span class="badge bg-secondary mb-2" style="background-color: var(--secondary-color) !important;">OFFICE</span>
+              <h3 class="h4 mb-2">Parkview HQ Tower</h3>
+              <p class="text-muted"><i class="fa-solid fa-location-dot me-2"></i>Geneva, CH</p>
+              <div class="card-custom-cta">
+                <a href="service-details.html" class="btn btn-outline-custom btn-custom w-100">Review Diligence</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="col-md-6 col-lg-4 gallery-item" data-category="retail">
+          <div class="card-custom">
+            <div class="card-custom-img-wrapper">
+              <img src="https://picsum.photos/id/1062/600/400" alt="Retail 1" class="card-custom-img">
+            </div>
+            <div class="card-custom-body">
+              <span class="badge bg-secondary mb-2" style="background-color: var(--secondary-color) !important;">RETAIL</span>
+              <h3 class="h4 mb-2">Bayside Retail Block</h3>
+              <p class="text-muted"><i class="fa-solid fa-location-dot me-2"></i>Marseille, FR</p>
+              <div class="card-custom-cta">
+                <a href="service-details.html" class="btn btn-outline-custom btn-custom w-100">Review Diligence</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Deal Map Location Finder -->
+  <section class="py-5 bg-offset border-top">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2>Interactive Deal Locations</h2>
+        <p class="text-muted">A geographic representation of our high-value closed transaction placements.</p>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="card p-3 border-0 shadow-sm rounded-3 bg-white">
+            <div class="bg-dark rounded-3 position-relative" style="height: 350px; background-image: url('https://picsum.photos/id/1059/1000/600'); background-size: cover; background-position: center;">
+              <!-- Interactive Hotspots mockups -->
+              <div class="position-absolute bg-primary rounded-circle border border-white text-white p-2 d-flex align-items-center justify-content-center" style="width: 32px; height: 32px; top: 30%; left: 45%; cursor: pointer;" title="Frankfurt Tower" onclick="alert('Frankfurt: $185M Office Asset Closed')">
+                <i class="fa-solid fa-building fs-6"></i>
+              </div>
+              <div class="position-absolute bg-primary rounded-circle border border-white text-white p-2 d-flex align-items-center justify-content-center" style="width: 32px; height: 32px; top: 25%; left: 42%; cursor: pointer;" title="Rotterdam Port Hub" onclick="alert('Rotterdam: $220M Logistics Hub Closed')">
+                <i class="fa-solid fa-truck fs-6"></i>
+              </div>
+              <div class="position-absolute bg-primary rounded-circle border border-white text-white p-2 d-flex align-items-center justify-content-center" style="width: 32px; height: 32px; top: 40%; left: 48%; cursor: pointer;" title="Marseille Retail" onclick="alert('Marseille: $95M Retail Block Closed')">
+                <i class="fa-solid fa-shop fs-6"></i>
+              </div>
+              <div class="position-absolute bottom-0 end-0 m-3 bg-black bg-opacity-75 text-white p-2 rounded small">
+                Click map pins to inspect closed deal values.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Request for Proposal (RFP) / Mandate Submission -->
+  <section class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2>Submit Transaction Mandate</h2>
+        <p class="text-muted">Representing a developer or institutional seller? Submit your property criteria directly to our underwriting desks.</p>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card p-4 border-0 shadow-sm rounded-3 bg-offset">
+            <form id="mandate-submission-form" class="row g-3 needs-validation" novalidate>
+              <div class="col-md-6">
+                <label for="mandate-title" class="form-label font-weight-bold">Asset Name / Title</label>
+                <input type="text" class="form-control" id="mandate-title" placeholder="e.g. Rhine Logistics Park" required>
+              </div>
+              <div class="col-md-6">
+                <label for="mandate-type" class="form-label font-weight-bold">Asset Category</label>
+                <select class="form-select" id="mandate-type" required>
+                  <option value="" selected disabled>Select class...</option>
+                  <option value="logistics">Logistics Hub</option>
+                  <option value="office">Grade-A Office</option>
+                  <option value="retail">Retail Block</option>
+                  <option value="multifamily">Multi-Family Portfolio</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label for="mandate-location" class="form-label font-weight-bold">Location (City, Country)</label>
+                <input type="text" class="form-control" id="mandate-location" placeholder="e.g. Frankfurt, Germany" required>
+              </div>
+              <div class="col-md-6">
+                <label for="mandate-value" class="form-label font-weight-bold">Estimated Deal Value ($)</label>
+                <input type="number" class="form-control" id="mandate-value" placeholder="e.g. 45000000" required>
+              </div>
+              <div class="col-12 text-center mt-4">
+                <button type="submit" class="btn btn-primary-custom btn-custom px-4 py-2">Submit Deal Proposal</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer-custom">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="logo-footer mb-3 text-primary-custom" style="color: var(--primary-color);">
+            <svg width="180" height="50" viewBox="0 0 180 50" fill="none" xmlns="http://www.w3.org/2000/svg" class="align-middle">
+              <path d="M10 40V15L22 5L34 15V40" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+              <path d="M16 40V22H28V40" stroke="currentColor" stroke-width="2"/>
+              <path d="M22 10V15" stroke="currentColor" stroke-width="2"/>
+              <line x1="5" y1="40" x2="39" y2="40" stroke="currentColor" stroke-width="2.5"/>
+              <text x="46" y="28" font-family="'Outfit', sans-serif" font-weight="700" font-size="21" fill="currentColor">VERTEX</text>
+              <text x="46" y="42" font-family="'Outfit', sans-serif" font-weight="500" font-size="10" fill="currentColor" letter-spacing="1.5">COMMERCIAL</text>
+            </svg>
+          </div>
+          <p class="text-muted">Pioneering institutional commercial real estate transactions with institutional security and digital deal management.</p>
+          <div class="d-flex gap-3 mt-3 footer-custom-social-links">
+            <a href="#" class="text-muted fs-5"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#" class="text-muted fs-5"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="text-muted fs-5"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="text-muted fs-5"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3">
+          <h4 class="footer-links-title">Quick Links</h4>
+          <a href="index.html" class="footer-link">Home</a>
+          <a href="about.html" class="footer-link">About Us</a>
+          <a href="services.html" class="footer-link">Advisory Services</a>
+          <a href="pricing.html" class="footer-link">Pricing Models</a>
+          <a href="gallery.html" class="footer-link">Case Gallery</a>
+        </div>
+
+        <div class="col-lg-2 col-md-3">
+          <h4 class="footer-links-title">Resources</h4>
+          <a href="blog.html" class="footer-link">Market Reports</a>
+          <a href="contact.html#booking" class="footer-link">Broker Meeting</a>
+          <a href="login.html" class="footer-link">Investor Portal</a>
+          <a href="contact.html" class="footer-link">Get in Touch</a>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <h4 class="footer-links-title">Market Newsletter</h4>
+          <p class="text-muted">Receive monthly reports on yields, cap rates, and off-market commercial assets.</p>
+          <form class="d-flex needs-validation" novalidate>
+            <input type="email" class="form-control newsletter-input" placeholder="Advisor email" required>
+            <button type="submit" class="btn btn-primary-custom newsletter-btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <hr class="my-4">
+
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start">
+          <p class="mb-0 text-muted">&copy; 2026 Vertex Commercial. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
+          <a href="#" class="text-muted me-3">Privacy Policy</a>
+          <a href="#" class="text-muted">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to Top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Filter controls logic
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Toggle button states
+        filterButtons.forEach(b => {
+          b.classList.remove('btn-primary-custom');
+          b.classList.add('btn-outline-custom', 'border-0');
+        });
+        btn.classList.add('btn-primary-custom');
+        btn.classList.remove('btn-outline-custom', 'border-0');
+
+        const filter = btn.getAttribute('data-filter');
+        galleryItems.forEach(item => {
+          if (filter === 'all' || item.getAttribute('data-category') === filter) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

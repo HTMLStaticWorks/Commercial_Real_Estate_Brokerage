@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing Plans & Subscriptions | Vertex Commercial</title>
+  <meta name="description" content="View pricing plans for Vertex Commercial property listings, market advisory reports, and institutional underwriting.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏢</text></svg>">
+  
+  <!-- Bootstrap 5 CSS via CDN -->
+  <link id="bootstrap-cdn" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+  <!-- Header / Navbar -->
+  <nav class="navbar navbar-expand-xl navbar-custom fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <svg width="180" height="50" viewBox="0 0 180 50" fill="none" xmlns="http://www.w3.org/2000/svg" class="align-middle" style="color: var(--primary-color);">
+          <path d="M10 40V15L22 5L34 15V40" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+          <path d="M16 40V22H28V40" stroke="currentColor" stroke-width="2"/>
+          <path d="M22 10V15" stroke="currentColor" stroke-width="2"/>
+          <line x1="5" y1="40" x2="39" y2="40" stroke="currentColor" stroke-width="2.5"/>
+          <text x="46" y="28" font-family="'Outfit', sans-serif" font-weight="700" font-size="21" fill="currentColor">VERTEX</text>
+          <text x="46" y="42" font-family="'Outfit', sans-serif" font-weight="500" font-size="10" fill="currentColor" letter-spacing="1.5">COMMERCIAL</text>
+        </svg>
+      </a>
+
+      <div class="d-flex align-items-center order-xl-3 gap-2">
+        <button id="theme-toggle" class="btn btn-outline-custom btn-custom py-2 px-3" title="Toggle Theme" aria-label="Toggle Theme">
+          <i class="fa-solid fa-moon fs-5"></i>
+        </button>
+        <button id="rtl-toggle" class="btn btn-outline-custom btn-custom py-2 px-3" title="Toggle RTL" aria-label="Toggle RTL">
+          <span>RTL</span>
+        </button>
+        <a href="login.html" class="btn btn-outline-custom btn-custom d-none d-sm-inline-block py-2 px-3">Login</a>
+        <a href="dashboard-user-profile.html" class="btn btn-primary-custom btn-custom d-none d-sm-inline-block py-2 px-3">Dashboard</a>
+        
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header border-bottom">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-center flex-grow-1 pe-3 gap-1">
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="home-2.html">Home2</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="pricing.html">Pricing</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="gallery.html">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="blog.html">Insights</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="contact.html">Contact</a></li>
+          </ul>
+          <div class="d-sm-none d-flex flex-column gap-2 mt-3">
+            <a href="login.html" class="btn btn-outline-custom w-100 py-2">Login</a>
+            <a href="dashboard-user-profile.html" class="btn btn-primary-custom w-100 py-2">Dashboard</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-inner" style="background-image: url('https://picsum.photos/id/1071/1200/500');">
+    <div class="hero-inner-overlay"></div>
+    <div class="container hero-inner-content">
+      <h1>Subscription Models</h1>
+      <p class="lead max-w-2xl mx-auto">Flexible plans offering access to databases, diligence rooms, and broker pipelines.</p>
+    </div>
+  </section>
+
+  <!-- Pricing Cards Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-4 justify-content-center align-items-stretch">
+        <!-- Card 1: Core Research (Secondary Plan) -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card-custom border-2 border-muted">
+            <div class="card-custom-body">
+              <span class="text-uppercase font-weight-bold text-muted small mb-2 d-block">CORE DATA</span>
+              <h3 class="h4 mb-3">Market Observer</h3>
+              <div class="display-5 mb-4 font-weight-bold">$120<span class="fs-6 text-muted">/mo</span></div>
+              <ul class="list-unstyled text-start w-100 mb-4 border-top pt-3">
+                <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Access to monthly yield index</li>
+                <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Public listing searches</li>
+                <li class="mb-2 text-muted"><i class="fa-solid fa-xmark me-2"></i> Secure Deal Room access</li>
+                <li class="mb-2 text-muted"><i class="fa-solid fa-xmark me-2"></i> Broker pipeline tour booking</li>
+              </ul>
+              <div class="card-custom-cta">
+                <!-- Secondary Style -->
+                <a href="register.html" class="btn btn-secondary-custom btn-custom w-100">Subscribe Core</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Transaction Advisor (Primary Highlighted Plan) -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card-custom border-primary border-3" style="transform: scale(1.03); border-color: var(--primary-color) !important; background-color: var(--bg-offset);">
+            <div class="card-custom-body position-relative">
+              <span class="position-absolute top-0 end-0 bg-primary text-white py-1 px-3 rounded-bottom-0 rounded-start-3 small" style="background-color: var(--primary-color) !important;">POPULAR</span>
+              <span class="text-uppercase font-weight-bold text-secondary-custom small mb-2 d-block" style="color: var(--secondary-color);">TRANSACTION LEVEL</span>
+              <h3 class="h4 mb-3">Active Advisor</h3>
+              <div class="display-5 mb-4 font-weight-bold">$490<span class="fs-6 text-muted">/mo</span></div>
+              <ul class="list-unstyled text-start w-100 mb-4 border-top pt-3">
+                <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Quarterly detailed reports</li>
+                <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Unlimited public listings searches</li>
+                <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Encrypted Due Diligence Rooms</li>
+                <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Direct broker video consults</li>
+              </ul>
+              <div class="card-custom-cta">
+                <!-- Primary Style -->
+                <a href="register.html" class="btn btn-primary-custom btn-custom w-100">Subscribe Advisor</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Enterprise Capital (Secondary Plan) -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card-custom border-2 border-muted">
+            <div class="card-custom-body">
+              <span class="text-uppercase font-weight-bold text-muted small mb-2 d-block">INSTITUTIONAL</span>
+              <h3 class="h4 mb-3">Enterprise Capital</h3>
+              <div class="display-5 mb-4 font-weight-bold">Custom</div>
+              <ul class="list-unstyled text-start w-100 mb-4 border-top pt-3">
+                <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Fully dedicated portfolio advisors</li>
+                <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Off-market sourcing pipeline</li>
+                <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Encrypted Deal Rooms (All assets)</li>
+                <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Dynamic API integration hooks</li>
+              </ul>
+              <div class="card-custom-cta">
+                <!-- Secondary Style -->
+                <a href="contact.html" class="btn btn-secondary-custom btn-custom w-100">Inquire Enterprise</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Pricing Features Comparison Table -->
+  <section class="py-5 bg-offset border-top">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2>Compare Advisory Features</h2>
+        <p class="text-muted">Review specific features, reports, and deal room capacities included in each subscription level.</p>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="table-responsive bg-white rounded-3 shadow-sm p-3">
+            <table class="table align-middle text-center mb-0">
+              <thead>
+                <tr>
+                  <th class="text-start" style="width: 40%;">Core Capabilities</th>
+                  <th style="width: 20%;">Observer</th>
+                  <th style="width: 20%;">Active Advisor</th>
+                  <th style="width: 20%;">Enterprise</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-start">Public Listing Access</td>
+                  <td><i class="fa-solid fa-circle-check text-success"></i></td>
+                  <td><i class="fa-solid fa-circle-check text-success"></i></td>
+                  <td><i class="fa-solid fa-circle-check text-success"></i></td>
+                </tr>
+                <tr>
+                  <td class="text-start">Market Research Reports</td>
+                  <td>Monthly Briefings</td>
+                  <td>Quarterly In-Depth</td>
+                  <td>Custom & On-Demand</td>
+                </tr>
+                <tr>
+                  <td class="text-start">Due Diligence Document Vaults</td>
+                  <td><i class="fa-solid fa-circle-xmark text-danger"></i></td>
+                  <td>Active Mandates</td>
+                  <td>Unlimited Vaults</td>
+                </tr>
+                <tr>
+                  <td class="text-start">Dedicated Advisor Call Support</td>
+                  <td>Email only</td>
+                  <td>4 Hours / Mo</td>
+                  <td>24/7 Priority Line</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Value Add Guarantee / Trust Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <h2>Securing Your Capital Placements</h2>
+          <p class="text-muted">
+            Vertex Commercial guarantees absolute compliance and institutional-grade data security protocols. Every transaction document is double-verified by certified underwriters.
+          </p>
+          <div class="row g-4 mt-2">
+            <div class="col-6">
+              <h5><i class="fa-solid fa-shield-virus text-secondary-custom me-2" style="color: var(--secondary-color);"></i> ISO 27001 Security</h5>
+              <p class="small text-muted">All documents are stored in server structures compliant with global standards.</p>
+            </div>
+            <div class="col-6">
+              <h5><i class="fa-solid fa-user-tie text-secondary-custom me-2" style="color: var(--secondary-color);"></i> RICS Underwriting</h5>
+              <p class="small text-muted">Valuations reviewed under Royal Institution of Chartered Surveyors guidelines.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <img src="https://picsum.photos/id/1076/600/400" alt="Secure Server Room" class="img-fluid rounded shadow-sm w-100" style="border-radius: var(--border-radius-card) !important;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer-custom">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="logo-footer mb-3 text-primary-custom" style="color: var(--primary-color);">
+            <svg width="180" height="50" viewBox="0 0 180 50" fill="none" xmlns="http://www.w3.org/2000/svg" class="align-middle">
+              <path d="M10 40V15L22 5L34 15V40" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+              <path d="M16 40V22H28V40" stroke="currentColor" stroke-width="2"/>
+              <path d="M22 10V15" stroke="currentColor" stroke-width="2"/>
+              <line x1="5" y1="40" x2="39" y2="40" stroke="currentColor" stroke-width="2.5"/>
+              <text x="46" y="28" font-family="'Outfit', sans-serif" font-weight="700" font-size="21" fill="currentColor">VERTEX</text>
+              <text x="46" y="42" font-family="'Outfit', sans-serif" font-weight="500" font-size="10" fill="currentColor" letter-spacing="1.5">COMMERCIAL</text>
+            </svg>
+          </div>
+          <p class="text-muted">Pioneering institutional commercial real estate transactions with institutional security and digital deal management.</p>
+          <div class="d-flex gap-3 mt-3 footer-custom-social-links">
+            <a href="#" class="text-muted fs-5"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#" class="text-muted fs-5"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="text-muted fs-5"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="text-muted fs-5"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3">
+          <h4 class="footer-links-title">Quick Links</h4>
+          <a href="index.html" class="footer-link">Home</a>
+          <a href="about.html" class="footer-link">About Us</a>
+          <a href="services.html" class="footer-link">Advisory Services</a>
+          <a href="pricing.html" class="footer-link">Pricing Models</a>
+          <a href="gallery.html" class="footer-link">Case Gallery</a>
+        </div>
+
+        <div class="col-lg-2 col-md-3">
+          <h4 class="footer-links-title">Resources</h4>
+          <a href="blog.html" class="footer-link">Market Reports</a>
+          <a href="contact.html#booking" class="footer-link">Broker Meeting</a>
+          <a href="login.html" class="footer-link">Investor Portal</a>
+          <a href="contact.html" class="footer-link">Get in Touch</a>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <h4 class="footer-links-title">Market Newsletter</h4>
+          <p class="text-muted">Receive monthly reports on yields, cap rates, and off-market commercial assets.</p>
+          <form class="d-flex needs-validation" novalidate>
+            <input type="email" class="form-control newsletter-input" placeholder="Advisor email" required>
+            <button type="submit" class="btn btn-primary-custom newsletter-btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <hr class="my-4">
+
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start">
+          <p class="mb-0 text-muted">&copy; 2026 Vertex Commercial. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
+          <a href="#" class="text-muted me-3">Privacy Policy</a>
+          <a href="#" class="text-muted">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to Top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

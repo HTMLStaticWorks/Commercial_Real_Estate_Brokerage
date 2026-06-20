@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Due Diligence Rooms | Vertex Dashboard</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏢</text></svg>">
+  
+  <!-- Bootstrap 5 CSS via CDN -->
+  <link id="bootstrap-cdn" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <style>
+    .sidebar-dashboard {
+      min-height: 100vh;
+      border-right: 1px solid var(--border-color);
+      background-color: var(--bg-offset);
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 100;
+      width: 260px;
+      padding-top: 1.5rem;
+      transition: var(--transition-smooth);
+    }
+    .main-content-dashboard {
+      margin-left: 260px;
+      padding: 2rem;
+      min-height: 100vh;
+    }
+    [dir="rtl"] .sidebar-dashboard {
+      border-right: none;
+      border-left: 1px solid var(--border-color);
+      left: auto;
+      right: 0;
+    }
+    [dir="rtl"] .main-content-dashboard {
+      margin-left: 0;
+      margin-right: 260px;
+    }
+    @media (max-width: 991.98px) {
+      .sidebar-dashboard {
+        transform: translateX(-100%);
+        width: 100%;
+      }
+      .sidebar-dashboard.show {
+        transform: translateX(0);
+      }
+      .main-content-dashboard {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
+      [dir="rtl"] .sidebar-dashboard {
+        transform: translateX(100%);
+      }
+      [dir="rtl"] .sidebar-dashboard.show {
+        transform: translateX(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container-fluid p-0">
+    <!-- Sidebar Navigation -->
+    <div class="sidebar-dashboard d-flex flex-column" id="sidebarMenu">
+      <div class="px-4 mb-4 d-flex justify-content-between align-items-center">
+        <a href="index.html" class="text-primary-custom" style="color: var(--primary-color);">
+          <svg width="180" height="50" viewBox="0 0 180 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 40V15L22 5L34 15V40" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+            <path d="M16 40V22H28V40" stroke="currentColor" stroke-width="2"/>
+            <path d="M22 10V15" stroke="currentColor" stroke-width="2"/>
+            <line x1="5" y1="40" x2="39" y2="40" stroke="currentColor" stroke-width="2.5"/>
+            <text x="46" y="28" font-family="'Outfit', sans-serif" font-weight="700" font-size="21" fill="currentColor">VERTEX</text>
+            <text x="46" y="42" font-family="'Outfit', sans-serif" font-weight="500" font-size="10" fill="currentColor" letter-spacing="1.5">COMMERCIAL</text>
+          </svg>
+        </a>
+        <button class="btn-close d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-label="Close"></button>
+      </div>
+
+      <ul class="nav flex-column px-3 gap-2">
+        <li class="nav-item">
+          <a class="nav-link nav-link-custom py-2 rounded" href="dashboard-user-profile.html">
+            <i class="fa-solid fa-user me-2"></i> Investor Profile
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-link-custom py-2 rounded" href="dashboard-user-saved-items.html">
+            <i class="fa-solid fa-magnifying-glass me-2"></i> Saved Searches
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-link-custom py-2 rounded" href="dashboard-user-meetings.html">
+            <i class="fa-solid fa-calendar-check me-2"></i> Broker Meetings
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-link-custom py-2 rounded active" href="dashboard-user-due-diligence.html">
+            <i class="fa-solid fa-folder-closed me-2"></i> Due Diligence Rooms
+          </a>
+        </li>
+        <li class="nav-item border-top my-3"></li>
+        <li class="nav-item">
+          <a class="nav-link nav-link-custom py-2 rounded" href="dashboard-admin-overview.html" style="color: var(--secondary-color);">
+            <i class="fa-solid fa-toggle-on me-2"></i> Switch to Admin
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-link-custom py-2 rounded text-danger" href="login.html">
+            <i class="fa-solid fa-right-from-bracket me-2"></i> Logout
+          </a>
+        </li>
+      </ul>
+
+      <div class="mt-auto p-4 d-flex justify-content-between align-items-center border-top">
+        <button id="theme-toggle" class="btn btn-outline-custom btn-custom py-2 px-3" title="Toggle Theme" aria-label="Toggle Theme">
+          <i class="fa-solid fa-moon fs-5"></i>
+        </button>
+        <button id="rtl-toggle" class="btn btn-outline-custom btn-custom py-2 px-3" title="Toggle RTL" aria-label="Toggle RTL">
+          <span>RTL</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="main-content-dashboard">
+      <header class="d-flex justify-content-between align-items-center mb-4 pb-3 border-bottom">
+        <div class="d-flex align-items-center">
+          <button class="btn btn-outline-custom d-lg-none me-3" id="sidebarToggle" aria-label="Toggle Sidebar"><i class="fa-solid fa-bars"></i></button>
+          <h2 class="h3 mb-0">Due Diligence Document Room</h2>
+        </div>
+        <div class="d-flex align-items-center gap-3">
+          <div class="d-flex align-items-center">
+            <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 36px; height: 36px; background-color: var(--primary-color) !important;">
+              <strong>AC</strong>
+            </div>
+            <span class="ms-2 d-none d-md-inline font-weight-bold">Acme Capital</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Active Deal Diligence Documents -->
+      <div class="card p-4 border-0 shadow-sm rounded-3 mb-4">
+        <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+          <h3 class="h4 mb-0">Active Room: Rotterdam Logistics Corridor</h3>
+          <button id="download-selected-docs" class="btn btn-primary-custom btn-custom py-2 disabled"><i class="fa-solid fa-file-zipper me-2"></i>Download Selected Packages</button>
+        </div>
+
+        <div class="table-responsive-wrapper">
+          <table class="table align-middle">
+            <thead>
+              <tr>
+                <th width="40px">Select</th>
+                <th>Document Name</th>
+                <th>File Size</th>
+                <th>Format</th>
+                <th>Last Updated</th>
+                <th>Security Rating</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="checkbox" class="form-check-input doc-checkbox" data-doc-name="Rotterdam Rent Rolls Q1 2026"></td>
+                <td><strong>Rotterdam Rent Rolls Q1 2026</strong></td>
+                <td>2.4 MB</td>
+                <td><span class="badge bg-secondary" style="background-color: var(--secondary-color) !important;">PDF (Watermarked)</span></td>
+                <td>June 04, 2026</td>
+                <td><span class="badge bg-success">AES Secured</span></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" class="form-check-input doc-checkbox" data-doc-name="Phase I Environmental ESA Report"></td>
+                <td><strong>Phase I Environmental ESA Report</strong></td>
+                <td>14.8 MB</td>
+                <td><span class="badge bg-secondary" style="background-color: var(--secondary-color) !important;">PDF (Watermarked)</span></td>
+                <td>May 15, 2026</td>
+                <td><span class="badge bg-success">AES Secured</span></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" class="form-check-input doc-checkbox" data-doc-name="Transaction Underwriting DCF Model"></td>
+                <td><strong>Transaction Underwriting DCF Model</strong></td>
+                <td>1.1 MB</td>
+                <td><span class="badge bg-secondary" style="background-color: var(--secondary-color) !important;">XLSX (Encrypted)</span></td>
+                <td>June 12, 2026</td>
+                <td><span class="badge bg-success">AES Secured</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+</body>
+</html>
