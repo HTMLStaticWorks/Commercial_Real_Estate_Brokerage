@@ -314,7 +314,11 @@ h4, .h4, h5, .h5, h6, .h6 {
 .hero-1 {
   padding: 10rem 0 7rem 0;
   text-align: center;
-  background-color: var(--bg-offset);
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
 }
 
 .hero-2 {
@@ -347,11 +351,22 @@ h4, .h4, h5, .h5, h6, .h6 {
   color: #ffffff;
 }
 
+.hero-1 h1,
+.hero-1 .h1,
 .hero-inner h1,
-.hero-inner .h1,
+.hero-inner .h1 {
+  color: #ffffff !important;
+}
+
+.hero-1 p,
+.hero-1 .lead,
+.hero-2 p,
+.hero-2 .lead,
 .hero-inner p,
 .hero-inner .lead {
+  font-weight: 600 !important;
   color: #ffffff !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
 }
 
 .hero-inner-overlay {
@@ -465,3 +480,139 @@ h4, .h4, h5, .h5, h6, .h6 {
 .rtl-reverse {
   flex-direction: row-reverse;
 }
+
+/* Home 2 split hero section paragraph legibility */
+.hero-home2-split p,
+.hero-home2-split .lead {
+  font-weight: 600 !important;
+  color: var(--text-color) !important;
+}
+
+/* ==========================================================================
+   Responsiveness & Overflow Prevention Rules
+   ========================================================================== */
+
+/* Prevent horizontal scroll on containers and wrap long text */
+body, html {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+* {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Ensure headings scale correctly and do not overflow viewports */
+@media (max-width: 767.98px) {
+  h1, .h1 {
+    font-size: clamp(2.2rem, 8vw, 3.5rem) !important;
+  }
+  h2, .h2 {
+    font-size: clamp(1.8rem, 6vw, 2.5rem) !important;
+  }
+  h3, .h3 {
+    font-size: clamp(1.5rem, 4vw, 2rem) !important;
+  }
+  
+  /* Disable absolute text nowrap in headers/titles */
+  h1 span, h2 span, .text-nowrap {
+    white-space: normal !important;
+  }
+}
+
+/* Responsive Pipeline Track - Stacks vertically on small viewports */
+@media (max-width: 575.98px) {
+  .pipeline-track {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 1.5rem !important;
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+    margin-bottom: 2.5rem !important;
+  }
+  
+  .pipeline-track::after {
+    left: 31px !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    width: 4px !important;
+    height: auto !important;
+    right: auto !important;
+  }
+  
+  [dir="rtl"] .pipeline-track::after {
+    left: auto !important;
+    right: 31px !important;
+  }
+  
+  .pipeline-step {
+    display: flex !important;
+    align-items: center !important;
+    text-align: left !important;
+    gap: 1.25rem !important;
+    padding: 0 !important;
+    background: transparent !important;
+    width: 100% !important;
+  }
+  
+  [dir="rtl"] .pipeline-step {
+    text-align: right !important;
+    flex-direction: row-reverse !important;
+  }
+  
+  .pipeline-step h4 {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  
+  .pipeline-dot {
+    margin: 0 !important;
+    flex-shrink: 0 !important;
+  }
+}
+
+/* Center alignment adjustments for mobile views */
+@media (max-width: 991.98px) {
+  /* Center align split hero in home-2 */
+  .hero-home2-split {
+    text-align: center !important;
+  }
+  .hero-home2-split h1 {
+    text-align: center !important;
+  }
+  .hero-home2-split .d-flex {
+    justify-content: center !important;
+  }
+  .hero-home2-split .border-start {
+    border-left: none !important;
+    border-right: none !important;
+    border-top: none !important;
+    padding-left: 0 !important;
+    text-align: center !important;
+  }
+  
+  /* Center align Predictive Yield Engine in services.html */
+  .py-5 .border-start.border-3 {
+    border-left: none !important;
+    border-right: none !important;
+    border-top: none !important;
+    padding-left: 0 !important;
+    text-align: center !important;
+  }
+  .py-5 .row.g-3.mb-4 {
+    justify-content: center !important;
+  }
+  .py-5 .row.g-3.mb-4 .col-6,
+  .py-5 .row.g-3.mb-4 .col-sm-4 {
+    text-align: center !important;
+    width: auto !important;
+    flex: 0 0 auto !important;
+    padding: 0 1rem !important;
+  }
+  .py-5 .col-lg-6 {
+    text-align: center !important;
+  }
+}
+
+

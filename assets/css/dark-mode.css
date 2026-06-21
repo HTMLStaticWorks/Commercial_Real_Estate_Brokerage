@@ -29,9 +29,7 @@
   border-top-color: var(--border-color);
 }
 
-[data-bs-theme="dark"] .hero-1 {
-  background-color: var(--bg-offset);
-}
+
 
 [data-bs-theme="dark"] .btn-primary-custom {
   background-color: var(--secondary-color);

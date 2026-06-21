@@ -21,85 +21,104 @@
 </head>
 <body class="bg-offset">
 
-  <!-- Top-Right Controls only: NO global header or footer -->
-  <div class="position-absolute top-0 end-0 p-3 d-flex gap-2">
-    <button id="theme-toggle" class="btn btn-outline-custom btn-custom py-2 px-3" title="Toggle Theme" aria-label="Toggle Theme">
+  <!-- Centered vertical stack layout with controls in flow -->
+  <div class="d-flex flex-column min-vh-100 py-4">
+    <!-- Top-Right Controls in flow to prevent overlap -->
+    <div class="d-flex justify-content-end px-4 mb-3">
+      <div class="d-flex gap-2">
+        <button id="theme-toggle" class="btn btn-outline-custom btn-custom py-2 px-3" title="Toggle Theme" aria-label="Toggle Theme">
           <i class="fa-solid fa-moon fs-5"></i>
         </button>
-    <button id="rtl-toggle" class="btn btn-outline-custom btn-custom py-2 px-3" title="Toggle RTL" aria-label="Toggle RTL">
+        <button id="rtl-toggle" class="btn btn-outline-custom btn-custom py-2 px-3" title="Toggle RTL" aria-label="Toggle RTL">
           <span>RTL</span>
         </button>
-  </div>
-
-  <!-- Form Card Centered vertical stack layout -->
-  <div class="container d-flex justify-content-center align-items-center min-vh-100 py-5">
-    <div class="card p-4 border-0 shadow-lg w-100" style="max-width: 480px; border-radius: var(--border-radius-card); background-color: var(--card-bg);">
-      <div class="text-center mb-4">
-        <!-- Site Logo identical to main logo -->
-        <a href="index.html" class="d-inline-block text-primary-custom" style="color: var(--primary-color);">
-          <svg width="180" height="50" viewBox="0 0 180 50" fill="none" xmlns="http://www.w3.org/2000/svg" class="align-middle">
-            <path d="M10 40V15L22 5L34 15V40" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
-            <path d="M16 40V22H28V40" stroke="currentColor" stroke-width="2"/>
-            <path d="M22 10V15" stroke="currentColor" stroke-width="2"/>
-            <line x1="5" y1="40" x2="39" y2="40" stroke="currentColor" stroke-width="2.5"/>
-            <text x="46" y="28" font-family="'Outfit', sans-serif" font-weight="700" font-size="21" fill="currentColor">VERTEX</text>
-            <text x="46" y="42" font-family="'Outfit', sans-serif" font-weight="500" font-size="10" fill="currentColor" letter-spacing="1.5">COMMERCIAL</text>
-          </svg>
-        </a>
-        <h2 class="h3 mt-3">Investor Registration</h2>
-        <p class="text-muted small">Access exclusive deals and encrypted deal rooms. No demo credentials pre-filled.</p>
       </div>
+    </div>
 
-      <form class="needs-validation" novalidate id="register-form">
-        <!-- Username/Corporate Entity -->
-        <div class="mb-3">
-          <label for="reg-username" class="form-label font-weight-bold">Corporate Entity Name</label>
-          <input type="text" class="form-control" id="reg-username" placeholder="e.g. Acme Capital Partners" required>
+    <!-- Form Card Centered -->
+    <div class="container my-auto d-flex justify-content-center align-items-center">
+      <div class="card p-4 border-0 shadow-lg w-100" style="max-width: 480px; border-radius: var(--border-radius-card); background-color: var(--card-bg);">
+        <div class="text-center mb-4">
+          <!-- Site Logo identical to main logo -->
+          <a href="index.html" class="d-inline-block text-primary-custom" style="color: var(--primary-color);">
+            <svg width="180" height="50" viewBox="0 0 180 50" fill="none" xmlns="http://www.w3.org/2000/svg" class="align-middle">
+              <path d="M10 40V15L22 5L34 15V40" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+              <path d="M16 40V22H28V40" stroke="currentColor" stroke-width="2"/>
+              <path d="M22 10V15" stroke="currentColor" stroke-width="2"/>
+              <line x1="5" y1="40" x2="39" y2="40" stroke="currentColor" stroke-width="2.5"/>
+              <text x="46" y="28" font-family="'Outfit', sans-serif" font-weight="700" font-size="21" fill="currentColor">VERTEX</text>
+              <text x="46" y="42" font-family="'Outfit', sans-serif" font-weight="500" font-size="10" fill="currentColor" letter-spacing="1.5">COMMERCIAL</text>
+            </svg>
+          </a>
+          <h2 class="h3 mt-3">Investor Registration</h2>
+          <p class="text-muted small">Access exclusive deals and encrypted deal rooms. No demo credentials pre-filled.</p>
         </div>
 
-        <!-- Corporate Email -->
-        <div class="mb-3">
-          <label for="reg-email" class="form-label font-weight-bold">Corporate Email Address</label>
-          <input type="email" class="form-control" id="reg-email" placeholder="name@acmecapital.com" required>
-        </div>
-
-        <!-- Password input with visibility eye-toggle -->
-        <div class="mb-3">
-          <label for="reg-password" class="form-label font-weight-bold">Select Password</label>
-          <div class="input-group">
-            <input type="password" class="form-control" id="reg-password" required>
-            <button class="btn btn-outline-secondary" type="button" id="password-toggle">
-              <i class="fa-solid fa-eye" id="password-toggle-icon"></i>
-            </button>
+        <form class="needs-validation" novalidate id="register-form">
+          <!-- Username/Corporate Entity -->
+          <div class="mb-3">
+            <label for="reg-username" class="form-label font-weight-bold">Corporate Entity Name</label>
+            <input type="text" class="form-control" id="reg-username" placeholder="e.g. Acme Capital Partners" required>
           </div>
-        </div>
 
-        <!-- Terms Agreement -->
-        <div class="form-check mb-4">
-          <input type="checkbox" class="form-check-input" id="terms-agree" required>
-          <label class="form-check-label small" for="terms-agree">I certify that I am a qualified institutional buyer and agree to the platform Terms of Service.</label>
-        </div>
-
-        <!-- 100% width CTA button -->
-        <button type="submit" class="btn btn-primary-custom btn-custom w-100 py-2 mb-3">Create Investor Account</button>
-
-        <!-- Social Logins (Google / Apple) -->
-        <div class="text-center my-3">
-          <span class="text-muted small">Or register with</span>
-        </div>
-        <div class="row g-2 mb-4">
-          <div class="col-6">
-            <button type="button" class="btn btn-outline-secondary w-100 py-2 small"><i class="fa-brands fa-google me-2"></i>Google</button>
+          <!-- Corporate Email -->
+          <div class="mb-3">
+            <label for="reg-email" class="form-label font-weight-bold">Corporate Email Address</label>
+            <input type="email" class="form-control" id="reg-email" placeholder="name@acmecapital.com" required>
           </div>
-          <div class="col-6">
-            <button type="button" class="btn btn-outline-secondary w-100 py-2 small"><i class="fa-brands fa-apple me-2"></i>Apple</button>
-          </div>
-        </div>
 
-        <div class="text-center">
-          <span class="small text-muted">Already registered? <a href="login.html" class="text-secondary-custom" style="color: var(--secondary-color);">Login Here</a></span>
-        </div>
-      </form>
+          <!-- Password input with visibility eye-toggle -->
+          <div class="mb-3">
+            <label for="reg-password" class="form-label font-weight-bold">Select Password</label>
+            <div class="input-group">
+              <input type="password" class="form-control" id="reg-password" required>
+              <button class="btn btn-outline-secondary" type="button" id="password-toggle">
+                <i class="fa-solid fa-eye" id="password-toggle-icon"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Confirm Password input with visibility eye-toggle -->
+          <div class="mb-3">
+            <label for="reg-confirm-password" class="form-label font-weight-bold">Confirm Password</label>
+            <div class="input-group">
+              <input type="password" class="form-control" id="reg-confirm-password" required>
+              <button class="btn btn-outline-secondary" type="button" id="confirm-password-toggle">
+                <i class="fa-solid fa-eye" id="confirm-password-toggle-icon"></i>
+              </button>
+              <div class="invalid-feedback">
+                Passwords do not match.
+              </div>
+            </div>
+          </div>
+
+          <!-- Terms Agreement -->
+          <div class="form-check mb-4">
+            <input type="checkbox" class="form-check-input" id="terms-agree" required>
+            <label class="form-check-label small" for="terms-agree">I certify that I am a qualified institutional buyer and agree to the platform Terms of Service.</label>
+          </div>
+
+          <!-- 100% width CTA button -->
+          <button type="submit" class="btn btn-primary-custom btn-custom w-100 py-2 mb-3">Create Investor Account</button>
+
+          <!-- Social Logins (Google / Apple) -->
+          <div class="text-center my-3">
+            <span class="text-muted small">Or register with</span>
+          </div>
+          <div class="row g-2 mb-4">
+            <div class="col-6">
+              <button type="button" class="btn btn-outline-secondary w-100 py-2 small"><i class="fa-brands fa-google me-2"></i>Google</button>
+            </div>
+            <div class="col-6">
+              <button type="button" class="btn btn-outline-secondary w-100 py-2 small"><i class="fa-brands fa-apple me-2"></i>Apple</button>
+            </div>
+          </div>
+
+          <div class="text-center">
+            <span class="small text-muted">Already registered? <a href="login.html" class="text-secondary-custom" style="color: var(--secondary-color);">Login Here</a></span>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 
@@ -110,6 +129,10 @@
     const pwInput = document.getElementById('reg-password');
     const pwToggle = document.getElementById('password-toggle');
     const pwIcon = document.getElementById('password-toggle-icon');
+
+    const cpwInput = document.getElementById('reg-confirm-password');
+    const cpwToggle = document.getElementById('confirm-password-toggle');
+    const cpwIcon = document.getElementById('confirm-password-toggle-icon');
 
     if (pwToggle && pwInput) {
       pwToggle.addEventListener('click', () => {
@@ -125,13 +148,42 @@
       });
     }
 
+    if (cpwToggle && cpwInput) {
+      cpwToggle.addEventListener('click', () => {
+        if (cpwInput.type === 'password') {
+          cpwInput.type = 'text';
+          cpwIcon.classList.remove('fa-eye');
+          cpwIcon.classList.add('fa-eye-slash');
+        } else {
+          cpwInput.type = 'password';
+          cpwIcon.classList.remove('fa-eye-slash');
+          cpwIcon.classList.add('fa-eye');
+        }
+      });
+    }
+
     // Handle form submit redirecting to profile page
     const registerForm = document.getElementById('register-form');
     if(registerForm) {
+      const validatePasswords = () => {
+        if (pwInput.value !== cpwInput.value) {
+          cpwInput.setCustomValidity('Passwords do not match');
+        } else {
+          cpwInput.setCustomValidity('');
+        }
+      };
+
+      pwInput.addEventListener('change', validatePasswords);
+      cpwInput.addEventListener('keyup', validatePasswords);
+
       registerForm.addEventListener('submit', (e) => {
+        validatePasswords();
         if(registerForm.checkValidity()) {
           e.preventDefault();
           window.location.href = 'dashboard-user-profile.html';
+        } else {
+          e.preventDefault();
+          e.stopPropagation();
         }
       });
     }
