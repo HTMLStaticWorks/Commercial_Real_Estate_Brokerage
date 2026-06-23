@@ -113,8 +113,27 @@
               <label for="contact-message" class="form-label font-weight-bold">Brief Investment Thesis / Message</label>
               <textarea class="form-control" id="contact-message" rows="5" required></textarea>
             </div>
-            <div class="col-12">
+            <div class="col-12 d-flex flex-wrap align-items-center gap-3">
               <button type="submit" class="btn btn-primary-custom btn-custom py-2 px-4">Send Message</button>
+            </div>
+            
+            <!-- Social Media Buttons -->
+            <div class="col-12 mt-3">
+              <div class="text-muted mb-2 small text-uppercase font-weight-bold" style="letter-spacing: 1px; font-size: 0.85rem;">Follow Us:</div>
+              <div class="d-flex flex-wrap gap-2 align-items-center">
+                <a href="#" class="btn btn-outline-custom btn-custom py-2 px-3 d-flex align-items-center gap-2" style="font-size: 0.9rem;">
+                  <i class="fa-brands fa-linkedin-in fs-6"></i> LinkedIn
+                </a>
+                <a href="#" class="btn btn-outline-custom btn-custom py-2 px-3 d-flex align-items-center gap-2" style="font-size: 0.9rem;">
+                  <i class="fa-brands fa-x-twitter fs-6"></i> Twitter
+                </a>
+                <a href="#" class="btn btn-outline-custom btn-custom py-2 px-3 d-flex align-items-center gap-2" style="font-size: 0.9rem;">
+                  <i class="fa-brands fa-instagram fs-6"></i> Instagram
+                </a>
+                <a href="#" class="btn btn-outline-custom btn-custom py-2 px-3 d-flex align-items-center gap-2" style="font-size: 0.9rem;">
+                  <i class="fa-brands fa-youtube fs-6"></i> YouTube
+                </a>
+              </div>
             </div>
           </form>
         </div>
@@ -142,7 +161,7 @@
           <!-- Mock Map Panel -->
           <div class="card p-3 border-0 shadow-sm rounded-3 bg-offset">
             <h4 class="mb-2">Interactive Coverage</h4>
-            <div class="bg-dark rounded-3 position-relative" style="height: 200px; background-image: url('assets/images/contact_cta.png'); background-size: cover;">
+            <div class="bg-dark rounded-3 position-relative" style="height: 200px; background-image: url('assets/images/office_map.png'); background-size: cover; background-position: center;">
               <div class="position-absolute bottom-0 start-0 m-2 bg-black bg-opacity-75 text-white p-2 rounded small">
                 Interactive Map Simulator
               </div>
@@ -169,41 +188,42 @@
         <div class="col-lg-7">
           <div class="p-4 bg-body rounded-3 border">
             <h3 class="h4 mb-4 text-start"><i class="fa-regular fa-calendar-days me-2"></i> Select Date & Time</h3>
-            <div class="row row-cols-7 g-1 mb-4 text-center">
-              <!-- Simple calendar mockup header -->
-              <div class="col text-muted font-weight-bold">Mo</div>
-              <div class="col text-muted font-weight-bold">Tu</div>
-              <div class="col text-muted font-weight-bold">We</div>
-              <div class="col text-muted font-weight-bold">Th</div>
-              <div class="col text-muted font-weight-bold">Fr</div>
-              <div class="col text-muted font-weight-bold">Sa</div>
-              <div class="col text-muted font-weight-bold">Su</div>
+            
+            <!-- Calendar Navigation Header -->
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h5 id="calendar-month-year" class="mb-0 font-weight-bold" style="color: var(--primary-color);">June 2026</h5>
+              <div class="d-flex gap-1">
+                <button type="button" id="prev-month-btn" class="btn btn-sm btn-outline-custom py-1 px-2 border-0" aria-label="Previous Month">
+                  <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button type="button" id="next-month-btn" class="btn btn-sm btn-outline-custom py-1 px-2 border-0" aria-label="Next Month">
+                  <i class="fa-solid fa-chevron-right"></i>
+                </button>
+              </div>
+            </div>
 
-              <!-- Days row 1 -->
-              <div class="col"><button class="btn btn-light w-100 disabled text-muted">21</button></div>
-              <div class="col"><button class="btn btn-light w-100 disabled text-muted">22</button></div>
-              <div class="col"><button class="btn btn-light w-100 disabled text-muted">23</button></div>
-              <div class="col"><button class="btn btn-light w-100 disabled text-muted">24</button></div>
-              <div class="col"><button class="btn btn-light w-100 disabled text-muted">25</button></div>
-              <div class="col"><button class="btn btn-light w-100 disabled text-muted">26</button></div>
-              <div class="col"><button class="btn btn-light w-100 disabled text-muted">27</button></div>
+            <!-- Day Headers -->
+            <div class="row row-cols-7 g-1 mb-2 text-center text-muted font-weight-bold small">
+              <div class="col">Mo</div>
+              <div class="col">Tu</div>
+              <div class="col">We</div>
+              <div class="col">Th</div>
+              <div class="col">Fr</div>
+              <div class="col">Sa</div>
+              <div class="col">Su</div>
+            </div>
 
-              <!-- Days row 2 -->
-              <div class="col"><button class="btn btn-light w-100 date-btn">28</button></div>
-              <div class="col"><button class="btn btn-light w-100 date-btn">29</button></div>
-              <div class="col"><button class="btn btn-light w-100 date-btn">30</button></div>
-              <div class="col"><button class="btn btn-light w-100 date-btn active" style="background-color: var(--secondary-color); color: white;">01</button></div>
-              <div class="col"><button class="btn btn-light w-100 date-btn">02</button></div>
-              <div class="col"><button class="btn btn-light w-100 date-btn">03</button></div>
-              <div class="col"><button class="btn btn-light w-100 disabled">04</button></div>
+            <!-- Days Grid -->
+            <div class="row row-cols-7 g-1 mb-4 text-center" id="calendar-days-grid">
+              <!-- Days will be generated dynamically by JavaScript -->
             </div>
 
             <h4 class="h5 mb-3 text-start">Available Time Slots</h4>
             <div class="row g-2 text-center" id="time-slots-container">
-              <div class="col-6 col-sm-3"><button class="btn btn-outline-custom w-100 py-2 slot-btn">09:00 AM</button></div>
-              <div class="col-6 col-sm-3"><button class="btn btn-outline-custom w-100 py-2 slot-btn active" style="background-color: var(--primary-color); color: white;">10:30 AM</button></div>
-              <div class="col-6 col-sm-3"><button class="btn btn-outline-custom w-100 py-2 slot-btn">01:00 PM</button></div>
-              <div class="col-6 col-sm-3"><button class="btn btn-outline-custom w-100 py-2 slot-btn">03:30 PM</button></div>
+              <div class="col-6 col-sm-3"><button type="button" class="btn btn-outline-custom w-100 py-2 slot-btn">09:00 AM</button></div>
+              <div class="col-6 col-sm-3"><button type="button" class="btn btn-outline-custom w-100 py-2 slot-btn active">10:30 AM</button></div>
+              <div class="col-6 col-sm-3"><button type="button" class="btn btn-outline-custom w-100 py-2 slot-btn">01:00 PM</button></div>
+              <div class="col-6 col-sm-3"><button type="button" class="btn btn-outline-custom w-100 py-2 slot-btn">03:30 PM</button></div>
             </div>
           </div>
         </div>
@@ -229,6 +249,10 @@
                   <option>Compliance & deal room setups</option>
                 </select>
               </div>
+              <div class="mb-3">
+                <label for="book-datetime" class="form-label font-weight-bold">Selected Appointment</label>
+                <input type="text" class="form-control" id="book-datetime" readonly style="background-color: var(--bg-offset); cursor: not-allowed;">
+              </div>
               <button type="submit" class="btn btn-primary-custom btn-custom w-100 py-2">Confirm Meeting</button>
             </form>
           </div>
@@ -247,7 +271,7 @@
       <div class="row g-4 justify-content-center">
         <div class="col-md-4">
           <div class="card p-4 border-0 shadow-sm rounded-3 h-100 text-center">
-            <span class="fs-1 d-block mb-3 text-primary-custom"><i class="fa-solid fa-anchor"></i></span>
+            <span class="fs-1 d-block mb-3 text-secondary-custom" style="color: var(--secondary-color);"><i class="fa-solid fa-anchor"></i></span>
             <h3>Rotterdam HQ</h3>
             <p class="small text-muted mb-2">Willemswerf, Boompjes 40, Rotterdam, Netherlands</p>
             <p class="small text-muted font-weight-bold"><i class="fa-solid fa-envelope me-1"></i> rotterdam@vertex.com</p>
@@ -263,7 +287,7 @@
         </div>
         <div class="col-md-4">
           <div class="card p-4 border-0 shadow-sm rounded-3 h-100 text-center">
-            <span class="fs-1 d-block mb-3 text-primary-custom"><i class="fa-solid fa-building"></i></span>
+            <span class="fs-1 d-block mb-3 text-secondary-custom" style="color: var(--secondary-color);"><i class="fa-solid fa-building"></i></span>
             <h3>London Office</h3>
             <p class="small text-muted mb-2">The Shard, 32 London Bridge St, London, United Kingdom</p>
             <p class="small text-muted font-weight-bold"><i class="fa-solid fa-envelope me-1"></i> london@vertex.com</p>
@@ -344,33 +368,124 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/main.js"></script>
   <script>
-    // Handle manual visual clicks on dates and times
-    const dates = document.querySelectorAll('.date-btn');
-    dates.forEach(d => {
-      d.addEventListener('click', () => {
-        dates.forEach(x => {
-          x.classList.remove('active');
-          x.style.backgroundColor = '';
-          x.style.color = '';
-        });
-        d.classList.add('active');
-        d.style.backgroundColor = 'var(--secondary-color)';
-        d.style.color = 'white';
-      });
-    });
+    document.addEventListener('DOMContentLoaded', () => {
+      // Configuration
+      const today = new Date();
+      const todayMidnight = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+      
+      let selectedDate = new Date(todayMidnight);
+      let currentMonth = selectedDate.getMonth();
+      let currentYear = selectedDate.getFullYear();
+      let selectedTime = "10:30 AM";
 
-    const slots = document.querySelectorAll('.slot-btn');
-    slots.forEach(s => {
-      s.addEventListener('click', () => {
-        slots.forEach(x => {
-          x.classList.remove('active');
-          x.style.backgroundColor = '';
-          x.style.color = '';
-        });
-        s.classList.add('active');
-        s.style.backgroundColor = 'var(--primary-color)';
-        s.style.color = 'white';
+      const monthNames = [
+        "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+      ];
+
+      const monthYearDisplay = document.getElementById('calendar-month-year');
+      const daysGrid = document.getElementById('calendar-days-grid');
+      const prevBtn = document.getElementById('prev-month-btn');
+      const nextBtn = document.getElementById('next-month-btn');
+      const datetimeInput = document.getElementById('book-datetime');
+
+      // Update form text with selection
+      function updateAppointmentDisplay() {
+        if (datetimeInput) {
+          const options = { month: 'long', day: 'numeric', year: 'numeric' };
+          const dateStr = selectedDate.toLocaleDateString('en-US', options);
+          datetimeInput.value = `${dateStr} at ${selectedTime}`;
+        }
+      }
+
+      function renderCalendar(year, month) {
+        // Clear previous grid
+        daysGrid.innerHTML = '';
+
+        // Set header text
+        monthYearDisplay.innerText = `${monthNames[month]} ${year}`;
+
+        // Get first day of the month (Monday = 0, Sunday = 6)
+        let firstDayIndex = new Date(year, month, 1).getDay();
+        firstDayIndex = firstDayIndex === 0 ? 6 : firstDayIndex - 1;
+
+        // Get total days in month
+        const totalDays = new Date(year, month + 1, 0).getDate();
+
+        // Render leading empty grid spaces for padding
+        for (let i = 0; i < firstDayIndex; i++) {
+          const emptyCell = document.createElement('div');
+          emptyCell.className = 'col';
+          daysGrid.appendChild(emptyCell);
+        }
+
+        // Render actual days of the month
+        for (let day = 1; day <= totalDays; day++) {
+          const colDiv = document.createElement('div');
+          colDiv.className = 'col';
+
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'btn btn-light w-100 date-btn';
+          btn.innerText = day < 10 ? `0${day}` : day;
+
+          const dateObj = new Date(year, month, day);
+
+          if (dateObj < todayMidnight) {
+            btn.classList.add('disabled', 'text-muted');
+            btn.disabled = true;
+          } else {
+            // Check if this is the selected date
+            if (selectedDate.getDate() === day && selectedDate.getMonth() === month && selectedDate.getFullYear() === year) {
+              btn.classList.add('active');
+            }
+
+            btn.addEventListener('click', () => {
+              document.querySelectorAll('.date-btn').forEach(b => b.classList.remove('active'));
+              btn.classList.add('active');
+              selectedDate = new Date(year, month, day);
+              updateAppointmentDisplay();
+            });
+          }
+
+          colDiv.appendChild(btn);
+          daysGrid.appendChild(colDiv);
+        }
+      }
+
+      // Event Listeners for navigation
+      prevBtn.addEventListener('click', () => {
+        currentMonth--;
+        if (currentMonth < 0) {
+          currentMonth = 11;
+          currentYear--;
+        }
+        renderCalendar(currentYear, currentMonth);
       });
+
+      nextBtn.addEventListener('click', () => {
+        currentMonth++;
+        if (currentMonth > 11) {
+          currentMonth = 0;
+          currentYear++;
+        }
+        renderCalendar(currentYear, currentMonth);
+      });
+
+      // Handle slot clicks
+      const slots = document.querySelectorAll('.slot-btn');
+      slots.forEach(s => {
+        s.addEventListener('click', () => {
+          slots.forEach(x => x.classList.remove('active'));
+          s.classList.add('active');
+          selectedTime = s.innerText;
+          updateAppointmentDisplay();
+        });
+      });
+
+      // Initial Render
+      renderCalendar(currentYear, currentMonth);
+      updateAppointmentDisplay();
     });
   </script>
 </body>

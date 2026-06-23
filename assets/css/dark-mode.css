@@ -32,26 +32,35 @@
 
 
 [data-bs-theme="dark"] .btn-primary-custom {
-  background-color: var(--secondary-color);
-  border-color: var(--secondary-color);
-  color: #0d1218;
+  background-color: #cda250 !important;
+  border-color: #cda250 !important;
+  color: #0d1218 !important;
 }
 
-[data-bs-theme="dark"] .btn-primary-custom:hover {
-  background-color: transparent;
-  color: var(--secondary-color);
-  border-color: var(--secondary-color);
+[data-bs-theme="dark"] .btn-primary-custom:hover,
+[data-bs-theme="dark"] .btn-primary-custom:focus,
+[data-bs-theme="dark"] .btn-primary-custom:active {
+  background-color: #b8893e !important;
+  color: #ffffff !important;
+  border-color: #b8893e !important;
+  box-shadow: none !important;
 }
 
 [data-bs-theme="dark"] .btn-outline-custom {
-  color: #ffffff;
-  border-color: #ffffff;
+  color: #e2e8f0 !important;
+  border-color: #e2e8f0 !important;
+  background-color: transparent !important;
 }
 
-[data-bs-theme="dark"] .btn-outline-custom:hover {
-  background-color: #ffffff;
-  color: #0d1218;
+[data-bs-theme="dark"] .btn-outline-custom:hover,
+[data-bs-theme="dark"] .btn-outline-custom:focus,
+[data-bs-theme="dark"] .btn-outline-custom:active {
+  background-color: #e2e8f0 !important;
+  color: #0d1218 !important;
+  border-color: #e2e8f0 !important;
+  box-shadow: none !important;
 }
+
 
 [data-bs-theme="dark"] .nav-link-custom {
   color: var(--text-color);
@@ -62,6 +71,30 @@
   border-color: var(--border-color);
 }
 
-[data-bs-theme="dark"] .pipeline-step {
-  background-color: var(--bg-color);
+/* Custom Select Option Styles for Dark Mode */
+[data-bs-theme="dark"] select option,
+[data-bs-theme="dark"] .form-select option {
+  background-color: var(--card-bg);
+  color: var(--text-color);
 }
+
+[data-bs-theme="dark"] select option:disabled,
+[data-bs-theme="dark"] .form-select option:disabled {
+  color: var(--text-muted) !important;
+  -webkit-text-fill-color: var(--text-muted) !important;
+}
+
+/* Dark theme active states for calendar */
+[data-bs-theme="dark"] .date-btn.active {
+  background-color: var(--secondary-color) !important;
+  color: #0d1218 !important;
+  border-color: var(--secondary-color) !important;
+}
+
+[data-bs-theme="dark"] .slot-btn.active {
+  background-color: var(--primary-color) !important;
+  color: #0d1218 !important;
+  border-color: var(--primary-color) !important;
+}
+
+/* Pipeline steps use hardcoded colors in style.css — no dark mode override needed */

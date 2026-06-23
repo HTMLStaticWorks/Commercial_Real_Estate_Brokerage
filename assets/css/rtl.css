@@ -6,6 +6,40 @@
   text-align: right;
 }
 
+/* -----------------------------------------------------------------------
+   Navbar Brand / Logo — RTL Fix
+   The SVG logo uses absolute x-coordinates for its embedded text elements.
+   Bootstrap RTL's `direction: rtl` would cause the SVG text to overlap the
+   building icon. We lock the brand to LTR internally and give it a stable
+   flex basis so it never collapses into the nav controls.
+   ----------------------------------------------------------------------- */
+[dir="rtl"] .navbar-brand,
+[dir="rtl"] .logo-footer,
+[dir="rtl"] .logo-sidebar,
+[dir="rtl"] .logo-auth {
+  direction: ltr !important;
+  flex-shrink: 0;
+  display: inline-block;
+}
+
+[dir="rtl"] .navbar-brand svg,
+[dir="rtl"] .logo-footer svg,
+[dir="rtl"] .logo-sidebar svg,
+[dir="rtl"] .logo-auth svg {
+  direction: ltr !important;
+  display: block;
+}
+
+/* General fallback rule to lock any logo SVGs to LTR in RTL mode */
+[dir="rtl"] svg[viewBox="0 0 180 50"] {
+  direction: ltr !important;
+}
+
+[dir="rtl"] svg[viewBox="0 0 180 50"] text {
+  direction: ltr !important;
+}
+
+
 [dir="rtl"] .back-to-top {
   right: auto;
   left: 30px;

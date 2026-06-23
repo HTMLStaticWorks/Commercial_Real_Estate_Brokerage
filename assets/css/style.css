@@ -95,8 +95,8 @@ h4, .h4, h5, .h5, h6, .h6 {
 
 /* Buttons Rules */
 .btn-custom {
-  font-size: 1.05rem; /* 0.9rem to 1.2rem */
-  font-weight: 510; /* Weight 500-520 */
+  font-size: 1.05rem;
+  font-weight: 510;
   padding: 0.75rem 2rem;
   border-radius: var(--border-radius-card);
   transition: var(--transition-smooth);
@@ -104,41 +104,49 @@ h4, .h4, h5, .h5, h6, .h6 {
   letter-spacing: 1px;
 }
 
+/* --- Primary Button --- */
 .btn-primary-custom {
   background-color: var(--primary-color);
   color: #ffffff;
   border: 2px solid var(--primary-color);
 }
-
-.btn-primary-custom:hover, 
-.btn-primary-custom:focus {
-  background-color: transparent;
-  color: var(--primary-color);
-  border-color: var(--primary-color);
+.btn-primary-custom:hover,
+.btn-primary-custom:focus,
+.btn-primary-custom:active {
+  background-color: #cda250 !important; /* solid bronze gold */
+  color: #ffffff !important;
+  border-color: #cda250 !important;
+  box-shadow: none !important;
 }
 
+/* --- Secondary Button --- */
 .btn-secondary-custom {
-  background-color: var(--secondary-color);
+  background-color: #cda250;
   color: #ffffff;
-  border: 2px solid var(--secondary-color);
+  border: 2px solid #cda250;
 }
-
 .btn-secondary-custom:hover,
-.btn-secondary-custom:focus {
-  background-color: transparent;
-  color: var(--secondary-color);
-  border-color: var(--secondary-color);
+.btn-secondary-custom:focus,
+.btn-secondary-custom:active {
+  background-color: #b8893e !important; /* darkened gold — solid, always visible */
+  color: #ffffff !important;
+  border-color: #b8893e !important;
+  box-shadow: none !important;
 }
 
+/* --- Outline Button --- */
 .btn-outline-custom {
   background-color: transparent;
   color: var(--primary-color);
   border: 2px solid var(--primary-color);
 }
-
-.btn-outline-custom:hover {
-  background-color: var(--primary-color);
-  color: #ffffff;
+.btn-outline-custom:hover,
+.btn-outline-custom:focus,
+.btn-outline-custom:active {
+  background-color: #1a202c !important; /* hardcoded graphite — never transparent */
+  border-color: #1a202c !important;
+  color: #ffffff !important;
+  box-shadow: none !important;
 }
 
 /* Sticky Header Style */
@@ -235,8 +243,8 @@ h4, .h4, h5, .h5, h6, .h6 {
   right: 30px;
   width: 50px;
   height: 50px;
-  background-color: var(--primary-color);
-  color: #ffffff;
+  background-color: #1a202c !important; /* hardcoded graphite — always visible in both themes */
+  color: #ffffff !important;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -256,7 +264,8 @@ h4, .h4, h5, .h5, h6, .h6 {
 }
 
 .back-to-top:hover {
-  background-color: var(--secondary-color);
+  background-color: #cda250 !important; /* bronze gold on hover — always visible */
+  color: #ffffff !important;
   transform: translateY(-5px);
 }
 
@@ -304,11 +313,53 @@ h4, .h4, h5, .h5, h6, .h6 {
   align-items: center;
 }
 
+/* Card titles: reduced size + forced single line across all viewports */
+.card-custom-body h3,
+.card-custom-body .h3 {
+  font-size: 1.15rem !important;
+  font-weight: 600 !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  text-align: center;
+  line-height: 1.4;
+}
+
 .card-custom-cta {
   margin-top: auto;
   width: 100%;
   padding-top: 1.5rem;
 }
+
+.card-custom-cta a {
+  transition: var(--transition-smooth);
+  display: inline-block;
+  color: var(--text-muted) !important;
+}
+
+.card-custom-cta a:hover {
+  color: #cda250 !important; /* hardcoded hex gold on hover */
+  transform: translateY(-3px);
+}
+
+/* Value Cards in about.html */
+.value-card h3 {
+  font-size: 1.35rem !important;
+  font-weight: 600 !important;
+  line-height: 1.4 !important;
+  word-break: keep-all !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  margin-bottom: 0.75rem !important;
+}
+
+@media (max-width: 767.98px) {
+  .value-card h3 {
+    font-size: 1.15rem !important;
+  }
+}
+
 
 /* Hero Sections Layouts */
 .hero-1 {
@@ -417,22 +468,16 @@ h4, .h4, h5, .h5, h6, .h6 {
   margin-bottom: 2rem;
 }
 
+/* Remove the horizontal connector line */
 .pipeline-track::after {
-  content: '';
-  position: absolute;
-  height: 4px;
-  background-color: var(--border-color);
-  top: 15px;
-  left: 0;
-  right: 0;
-  z-index: 1;
+  display: none !important;
 }
 
 .pipeline-step {
   position: relative;
   z-index: 2;
   text-align: center;
-  background-color: var(--bg-color);
+  background-color: transparent !important;
   padding: 0 10px;
 }
 
@@ -441,21 +486,28 @@ h4, .h4, h5, .h5, h6, .h6 {
   height: 32px;
   border-radius: 50%;
   background-color: var(--border-color);
-  color: #ffffff;
+  color: var(--text-muted);
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 0.5rem auto;
   font-weight: bold;
   transition: var(--transition-smooth);
+  border: 1px solid var(--border-color);
 }
 
+/* Active step — bronze gold, same in both themes with high contrast text */
 .pipeline-step.active .pipeline-dot {
-  background-color: var(--secondary-color);
+  background-color: var(--secondary-color) !important;
+  color: var(--bg-color) !important;
+  border-color: var(--secondary-color) !important;
 }
 
+/* Completed step — primary color, matching theme context dynamically */
 .pipeline-step.completed .pipeline-dot {
-  background-color: var(--primary-color);
+  background-color: var(--primary-color) !important;
+  color: var(--bg-color) !important;
+  border-color: var(--primary-color) !important;
 }
 
 /* Table Horizontal Scroll Wrapper for Mobile */
@@ -514,12 +566,22 @@ body, html {
   h3, .h3 {
     font-size: clamp(1.5rem, 4vw, 2rem) !important;
   }
+
+  /* Keep card titles small and single-line on mobile too */
+  .card-custom-body h3,
+  .card-custom-body .h3 {
+    font-size: 1rem !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
   
   /* Disable absolute text nowrap in headers/titles */
   h1 span, h2 span, .text-nowrap {
     white-space: normal !important;
   }
 }
+
 
 /* Responsive Pipeline Track - Stacks vertically on small viewports */
 @media (max-width: 575.98px) {
@@ -613,6 +675,108 @@ body, html {
   .py-5 .col-lg-6 {
     text-align: center !important;
   }
+}
+
+/* Adaptive Card Background Utility */
+.bg-card-custom {
+  background-color: var(--card-bg) !important;
+}
+
+/* Popular Badge Styling with Adaptive Colors */
+.badge-popular {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+  padding: 5px 12px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+  line-height: 1;
+  transition: var(--transition-smooth);
+}
+
+/* 7 Column grid for Calendar */
+.row-cols-7 > * {
+  flex: 0 0 auto;
+  width: 14.2857142857%;
+}
+
+/* Interactive Booking Calendar & Time Slots */
+.date-btn, .slot-btn {
+  border-radius: var(--border-radius-card) !important;
+  font-weight: 500;
+  transition: var(--transition-smooth);
+}
+
+/* Selected active state for date buttons (Light theme) */
+.date-btn.active {
+  background-color: var(--secondary-color) !important;
+  color: #ffffff !important;
+  border-color: var(--secondary-color) !important;
+}
+
+/* Selected active state for slot buttons (Light theme) */
+.slot-btn.active {
+  background-color: var(--primary-color) !important;
+  color: #ffffff !important;
+  border-color: var(--primary-color) !important;
+}
+
+/* Dashboard Fixed Header Fix */
+.main-content-dashboard {
+  padding-top: 8rem !important; /* Offset for the fixed header height */
+}
+
+.main-content-dashboard header {
+  position: fixed !important;
+  top: 0;
+  left: 260px;
+  right: 0;
+  z-index: 90;
+  background-color: var(--bg-color);
+  padding: 1.5rem 2rem 1rem 2rem;
+  border-bottom: 1px solid var(--border-color);
+  transition: var(--transition-smooth);
+  margin: 0 !important; /* Reset margin overrides */
+}
+
+[dir="rtl"] .main-content-dashboard header {
+  left: 0;
+  right: 260px;
+}
+
+@media (max-width: 991.98px) {
+  .main-content-dashboard header {
+    left: 0 !important;
+    right: 0 !important;
+  }
+}
+
+/* Premium Stat Cards Styles */
+.stat-card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+  transition: var(--transition-smooth);
+}
+
+.stat-card-icon.success {
+  background-color: rgba(25, 135, 84, 0.12) !important;
+  color: #198754 !important;
+}
+
+.stat-card-icon.secondary {
+  background-color: rgba(205, 162, 80, 0.12) !important;
+  color: #cda250 !important;
+}
+
+.stat-card-icon.warning {
+  background-color: rgba(217, 119, 6, 0.12) !important;
+  color: #d97706 !important;
 }
 
 

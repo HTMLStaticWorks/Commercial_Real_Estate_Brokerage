@@ -34,7 +34,7 @@
     }
     .main-content-dashboard {
       margin-left: 260px;
-      padding: 2rem;
+      padding: 8rem 2rem 2rem 2rem;
       min-height: 100vh;
     }
     [dir="rtl"] .sidebar-dashboard {
@@ -46,6 +46,28 @@
     [dir="rtl"] .main-content-dashboard {
       margin-left: 0;
       margin-right: 260px;
+    }
+    .main-content-dashboard header {
+      position: fixed;
+      top: 0;
+      left: 260px;
+      right: 0;
+      z-index: 90;
+      background-color: var(--bg-color);
+      padding: 1.5rem 2rem 1rem 2rem;
+      border-bottom: 1px solid var(--border-color);
+      transition: var(--transition-smooth);
+      margin: 0 !important;
+    }
+    [dir="rtl"] .main-content-dashboard header {
+      left: 0;
+      right: 260px;
+    }
+    @media (max-width: 991.98px) {
+      .main-content-dashboard header {
+        left: 0 !important;
+        right: 0 !important;
+      }
     }
     @media (max-width: 991.98px) {
       .sidebar-dashboard {
@@ -74,7 +96,7 @@
     <!-- Sidebar Navigation -->
     <div class="sidebar-dashboard d-flex flex-column" id="sidebarMenu">
       <div class="px-4 mb-4 d-flex justify-content-between align-items-center">
-        <a href="index.html" class="text-primary-custom" style="color: var(--primary-color);">
+        <a href="index.html" class="logo-sidebar text-primary-custom" style="color: var(--primary-color);">
           <svg width="180" height="50" viewBox="0 0 180 50" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M10 40V15L22 5L34 15V40" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
             <path d="M16 40V22H28V40" stroke="currentColor" stroke-width="2"/>
@@ -108,26 +130,36 @@
             <i class="fa-solid fa-folder-closed me-2"></i> Due Diligence Rooms
           </a>
         </li>
-        <li class="nav-item border-top my-3"></li>
-        <li class="nav-item">
+      </ul>
+
+      <!-- Bottom Actions Block (Switch user, Logout, Theme and RTL) -->
+      <div class="mt-auto p-4 border-top d-flex flex-column gap-3">
+        <!-- Switch User -->
+        <div>
           <a class="nav-link nav-link-custom py-2 rounded" href="dashboard-admin-overview.html" style="color: var(--secondary-color);">
             <i class="fa-solid fa-toggle-on me-2"></i> Switch to Admin
           </a>
-        </li>
-        <li class="nav-item">
+        </div>
+
+        <!-- Logout Button -->
+        <div>
           <a class="nav-link nav-link-custom py-2 rounded text-danger" href="index.html">
             <i class="fa-solid fa-right-from-bracket me-2"></i> Logout
           </a>
-        </li>
-      </ul>
+        </div>
 
-      <div class="mt-auto p-4 d-flex justify-content-between align-items-center border-top">
-        <button id="theme-toggle" class="btn btn-outline-custom btn-custom py-2 px-3" title="Toggle Theme" aria-label="Toggle Theme">
-          <i class="fa-solid fa-moon fs-5"></i>
-        </button>
-        <button id="rtl-toggle" class="btn btn-outline-custom btn-custom py-2 px-3" title="Toggle RTL" aria-label="Toggle RTL">
-          <span>RTL</span>
-        </button>
+        <!-- Bottom Divider Line -->
+        <div class="border-top"></div>
+
+        <!-- Theme/RTL togglers -->
+        <div class="d-flex justify-content-between align-items-center">
+          <button id="theme-toggle" class="btn btn-outline-custom btn-custom py-2 px-3" title="Toggle Theme" aria-label="Toggle Theme">
+            <i class="fa-solid fa-moon fs-5"></i>
+          </button>
+          <button id="rtl-toggle" class="btn btn-outline-custom btn-custom py-2 px-3" title="Toggle RTL" aria-label="Toggle RTL">
+            <span>RTL</span>
+          </button>
+        </div>
       </div>
     </div>
 
@@ -140,9 +172,7 @@
         </div>
         <div class="d-flex align-items-center gap-3">
           <div class="d-flex align-items-center">
-            <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 36px; height: 36px; background-color: var(--primary-color) !important;">
-              <strong>AC</strong>
-            </div>
+            <img src="assets/images/vance_avatar.png" class="rounded-circle border" alt="Acme Capital" style="width: 36px; height: 36px; object-fit: cover; object-position: center top;">
             <span class="ms-2 d-none d-md-inline font-weight-bold">Acme Capital</span>
           </div>
         </div>
@@ -195,9 +225,31 @@
         <div class="row g-4">
           <div class="col-md-6 col-xxl-4">
             <div class="card border rounded-3 p-3">
-              <img src="assets/images/logistics_saved.png" class="img-fluid rounded-3 mb-2" alt="Logistics">
+              <img src="assets/images/logistics_center.png" class="img-fluid rounded-3 mb-2" alt="Logistics Hub" style="height: 150px; object-fit: cover;">
               <h4 class="h5">Prime logistics hub</h4>
               <p class="small text-muted mb-2"><i class="fa-solid fa-location-dot me-1"></i>Rotterdam, NL</p>
+              <div class="d-flex justify-content-between mt-auto">
+                <a href="service-details.html" class="btn btn-sm btn-primary-custom">Access Deal Room</a>
+                <button class="btn btn-sm btn-outline-danger border-0" onclick="this.closest('.col-md-6').remove()"><i class="fa-solid fa-trash"></i></button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-xxl-4">
+            <div class="card border rounded-3 p-3">
+              <img src="assets/images/skyscraper_commercial.png" class="img-fluid rounded-3 mb-2" alt="Office Skyscraper" style="height: 150px; object-fit: cover;">
+              <h4 class="h5">Frankfurt Office Tower</h4>
+              <p class="small text-muted mb-2"><i class="fa-solid fa-location-dot me-1"></i>Frankfurt, DE</p>
+              <div class="d-flex justify-content-between mt-auto">
+                <a href="service-details.html" class="btn btn-sm btn-primary-custom">Access Deal Room</a>
+                <button class="btn btn-sm btn-outline-danger border-0" onclick="this.closest('.col-md-6').remove()"><i class="fa-solid fa-trash"></i></button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-xxl-4">
+            <div class="card border rounded-3 p-3">
+              <img src="assets/images/retail_district.png" class="img-fluid rounded-3 mb-2" alt="Retail Block" style="height: 150px; object-fit: cover;">
+              <h4 class="h5">Bayside Retail Block</h4>
+              <p class="small text-muted mb-2"><i class="fa-solid fa-location-dot me-1"></i>London, UK</p>
               <div class="d-flex justify-content-between mt-auto">
                 <a href="service-details.html" class="btn btn-sm btn-primary-custom">Access Deal Room</a>
                 <button class="btn btn-sm btn-outline-danger border-0" onclick="this.closest('.col-md-6').remove()"><i class="fa-solid fa-trash"></i></button>

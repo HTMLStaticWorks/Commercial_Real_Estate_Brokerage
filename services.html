@@ -235,16 +235,16 @@
           <a href="contact.html" class="btn btn-primary-custom btn-custom">Request Platform Demo</a>
         </div>
         <div class="col-lg-6">
-          <div class="position-relative p-2 border rounded-4 bg-white shadow-sm overflow-hidden" style="border-color: var(--border-color);">
+          <div class="position-relative p-2 border rounded-4 bg-card-custom shadow-sm overflow-hidden" style="border-color: var(--border-color);">
             <!-- Custom stylized glassmorphic overlay over a skyscraper or server room to represent the golden predictive theme -->
             <img src="assets/images/region_america.png" alt="Vertex Analytics Dashboard" class="img-fluid rounded-3" style="width: 100%; height: 400px; object-fit: cover;">
-            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center" style="background: linear-gradient(135deg, rgba(205, 162, 80, 0.25) 0%, rgba(26, 32, 44, 0.75) 100%);">
-              <div class="text-center text-white p-4" style="background: rgba(26, 32, 44, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; max-width: 80%;">
-                <div class="mb-3">
-                  <i class="fa-solid fa-microchip fs-1" style="color: var(--secondary-color);"></i>
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end justify-content-center pb-4" style="background: linear-gradient(135deg, rgba(205, 162, 80, 0.25) 0%, rgba(26, 32, 44, 0.75) 100%);">
+              <div class="text-center text-white p-3" style="background: rgba(26, 32, 44, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 10px; max-width: 70%;">
+                <div class="mb-2">
+                  <i class="fa-solid fa-microchip fs-3" style="color: var(--secondary-color);"></i>
                 </div>
-                <h4 class="h5 mb-2 text-white">Vertex Engine Active</h4>
-                <p class="small mb-0 text-white-50">Monitoring global transaction yield curves and underwriting models in real-time.</p>
+                <h4 class="h6 mb-1 text-white" style="font-size: 1rem;">Vertex Engine Active</h4>
+                <p class="small mb-0 text-white-50" style="font-size: 0.8rem; line-height: 1.4;">Monitoring global transaction yield curves and underwriting models in real-time.</p>
               </div>
             </div>
           </div>
@@ -277,7 +277,7 @@
           </div>
         </div>
         <div class="col-lg-7 text-center">
-          <div class="p-5 bg-white border rounded shadow-sm">
+          <div class="card p-5 border-0 shadow-sm rounded-3">
             <h4 class="text-muted">Estimated Yield</h4>
             <div class="display-1 my-3 text-secondary-custom font-weight-bold" id="cap-rate-output" style="color: var(--secondary-color); font-size: 5rem;">5.00%</div>
             <p class="lead" id="cap-summary-text">A net income of $750,000 against a $15,000,000 asset price represents a 5.00% capitalization rate.</p>
@@ -301,7 +301,7 @@
               <div class="col-md-6">
                 <label for="brief-asset" class="form-label font-weight-bold">Primary Asset Focus</label>
                 <select class="form-select" id="brief-asset" required>
-                  <option value="" selected disabled>Choose asset class...</option>
+                  <option value="" selected disabled style="color: var(--text-muted); -webkit-text-fill-color: var(--text-muted);">Choose asset class...</option>
                   <option value="logistics">Logistics / Distribution Hubs</option>
                   <option value="office">Grade-A Corporate Offices</option>
                   <option value="retail">Metropolitan Retail Blocks</option>
@@ -311,7 +311,7 @@
               <div class="col-md-6">
                 <label for="brief-allocation" class="form-label font-weight-bold">Target Capital Allocation</label>
                 <select class="form-select" id="brief-allocation" required>
-                  <option value="" selected disabled>Choose range...</option>
+                  <option value="" selected disabled style="color: var(--text-muted); -webkit-text-fill-color: var(--text-muted);">Choose range...</option>
                   <option value="tier1">$5M - $15M</option>
                   <option value="tier2">$15M - $50M</option>
                   <option value="tier3">$50M - $150M</option>
@@ -321,7 +321,7 @@
               <div class="col-md-6">
                 <label for="brief-region" class="form-label font-weight-bold">Target Region</label>
                 <select class="form-select" id="brief-region" required>
-                  <option value="" selected disabled>Choose region...</option>
+                  <option value="" selected disabled style="color: var(--text-muted); -webkit-text-fill-color: var(--text-muted);">Choose region...</option>
                   <option value="na">North America</option>
                   <option value="eu">European Union</option>
                   <option value="uk">United Kingdom</option>
@@ -331,7 +331,7 @@
               <div class="col-md-6">
                 <label for="brief-horizon" class="form-label font-weight-bold">Investment Horizon</label>
                 <select class="form-select" id="brief-horizon" required>
-                  <option value="" selected disabled>Choose duration...</option>
+                  <option value="" selected disabled style="color: var(--text-muted); -webkit-text-fill-color: var(--text-muted);">Choose duration...</option>
                   <option value="short">3 - 5 Years (Value-Add)</option>
                   <option value="medium">5 - 10 Years (Core Yield)</option>
                   <option value="long">10+ Years (Sovereign / Pension)</option>
