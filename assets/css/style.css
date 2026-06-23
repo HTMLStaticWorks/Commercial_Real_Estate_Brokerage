@@ -460,6 +460,21 @@ h4, .h4, h5, .h5, h6, .h6 {
   z-index: 10;
 }
 
+/* Custom search button override to handle tablet and 1024px layouts nicely */
+.search-panel .btn-custom {
+  white-space: nowrap !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+@media (max-width: 1199.98px) {
+  .search-panel .btn-custom {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
+
 /* Horizontal Pipeline steps in dashboard */
 .pipeline-track {
   display: flex;
@@ -514,6 +529,15 @@ h4, .h4, h5, .h5, h6, .h6 {
 .table-responsive-wrapper {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+  width: 100%;
+}
+.table-responsive-wrapper table {
+  width: 100%;
+  margin-bottom: 0;
+}
+.table-responsive-wrapper th,
+.table-responsive-wrapper td {
+  white-space: nowrap !important;
 }
 
 /* Custom Tooltip Validation CSS */
@@ -779,4 +803,72 @@ body, html {
   color: #d97706 !important;
 }
 
+/* Custom Match Portfolio button styling */
+.match-portfolio-btn {
+  white-space: nowrap !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+@media (max-width: 1199.98px) {
+  .match-portfolio-btn {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .match-portfolio-btn {
+    transform: translateY(-6px);
+  }
+}
+
+/* Gallery Filter Buttons Wrapper */
+.gallery-filter-wrapper {
+  display: inline-flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 575.98px) {
+  .gallery-filter-wrapper {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .gallery-filter-wrapper .btn-custom {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+    font-size: 0.9rem !important;
+    text-align: center;
+    width: 100% !important;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Insights Subscribe Button & Input styling */
+.subscribe-alerts-btn,
+.subscribe-alerts-input {
+  height: 48px !important;
+}
+
+.subscribe-alerts-btn {
+  white-space: nowrap !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+@media (max-width: 1199.98px) {
+  .subscribe-alerts-btn {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
 
