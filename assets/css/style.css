@@ -108,7 +108,7 @@ h4, .h4, h5, .h5, h6, .h6 {
 .btn-primary-custom {
   background-color: var(--primary-color);
   color: #ffffff;
-  border: 2px solid var(--primary-color);
+  border: 2px solid var(--secondary-color);
 }
 .btn-primary-custom:hover,
 .btn-primary-custom:focus,
@@ -332,13 +332,13 @@ h4, .h4, h5, .h5, h6, .h6 {
   padding-top: 1.5rem;
 }
 
-.card-custom-cta a {
+.card-custom-cta a:not(.btn) {
   transition: var(--transition-smooth);
   display: inline-block;
   color: var(--text-muted) !important;
 }
 
-.card-custom-cta a:hover {
+.card-custom-cta a:not(.btn):hover {
   color: #cda250 !important; /* hardcoded hex gold on hover */
   transform: translateY(-3px);
 }
@@ -871,4 +871,37 @@ body, html {
     padding-right: 1rem !important;
   }
 }
+
+/* Supported Institutional Networks Responsiveness Override */
+@media (max-width: 1100px) {
+  .partners-grid .col-partner {
+    flex: 0 0 50% !important;
+    width: 50% !important;
+    max-width: 50% !important;
+  }
+}
+@media (min-width: 1101px) {
+  .partners-grid .col-partner {
+    flex: 0 0 20% !important;
+    width: 20% !important;
+    max-width: 20% !important;
+  }
+}
+
+/* Pricing Page CTA wrapping fix at 1024px / landscape tablet viewports */
+@media (min-width: 992px) and (max-width: 1200px) {
+  .pricing-grid .btn-custom {
+    font-size: 0.85rem !important;
+    padding-left: 0.85rem !important;
+    padding-right: 0.85rem !important;
+  }
+}
+
+/* Dashboard header responsive styling for mobile view */
+@media (max-width: 991.98px) {
+  .main-content-dashboard header h2.h3 {
+    font-size: 1.25rem !important;
+  }
+}
+
 

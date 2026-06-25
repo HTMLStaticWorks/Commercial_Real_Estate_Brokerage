@@ -98,3 +98,37 @@
 }
 
 /* Pipeline steps use hardcoded colors in style.css — no dark mode override needed */
+
+/* Back to Top Button in Dark Mode */
+[data-bs-theme="dark"] .back-to-top {
+  background-color: var(--bg-offset) !important;
+  border: 2px solid var(--secondary-color) !important;
+  color: var(--secondary-color) !important;
+}
+
+[data-bs-theme="dark"] .back-to-top:hover {
+  background-color: var(--secondary-color) !important;
+  color: #0d1218 !important;
+}
+
+/* Booking Calendar Dates in Dark Theme */
+[data-bs-theme="dark"] .date-btn {
+  background-color: transparent !important;
+  color: #e2e8f0 !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+[data-bs-theme="dark"] .date-btn:hover:not(:disabled):not(.disabled) {
+  background-color: var(--secondary-color) !important;
+  color: #0d1218 !important;
+  border-color: var(--secondary-color) !important;
+}
+
+[data-bs-theme="dark"] .date-btn.disabled,
+[data-bs-theme="dark"] .date-btn:disabled,
+[data-bs-theme="dark"] .date-btn.text-muted {
+  background-color: rgba(255, 255, 255, 0.03) !important;
+  color: rgba(255, 255, 255, 0.25) !important;
+  border-color: rgba(255, 255, 255, 0.05) !important;
+  opacity: 1 !important;
+}

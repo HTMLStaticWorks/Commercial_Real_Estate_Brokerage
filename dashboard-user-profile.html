@@ -129,6 +129,12 @@
           aria-label="Close"></button>
       </div>
 
+      <!-- User Profile (Mobile only) -->
+      <div class="d-flex align-items-center mb-4 px-4 d-lg-none border-bottom pb-3">
+        <img src="assets/images/vance_avatar.png" class="rounded-circle border" alt="Acme Capital" style="width: 36px; height: 36px; object-fit: cover; object-position: center top;">
+        <span class="ms-2 font-weight-bold">Acme Capital</span>
+      </div>
+
       <ul class="nav flex-column px-3 gap-2">
         <li class="nav-item">
           <a class="nav-link nav-link-custom py-2 rounded active" href="dashboard-user-profile.html">
@@ -173,7 +179,7 @@
         <div class="border-top"></div>
 
         <!-- Theme/RTL togglers -->
-        <div class="d-flex justify-content-between align-items-center">
+        <div class="d-flex justify-content-center align-items-center gap-2">
           <button id="theme-toggle" class="btn btn-outline-custom btn-custom py-2 px-3" title="Toggle Theme"
             aria-label="Toggle Theme">
             <i class="fa-solid fa-moon fs-5"></i>
@@ -196,28 +202,8 @@
           <h2 class="h3 mb-0">Investor Profile</h2>
         </div>
         <div class="d-flex align-items-center gap-3">
-          <!-- Notification bell -->
-          <div class="dropdown">
-            <button class="btn btn-outline-custom border-0 position-relative p-2" type="button"
-              data-bs-toggle="dropdown">
-              <i class="fa-solid fa-bell fs-5"></i>
-              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">2</span>
-            </button>
-            <ul class="dropdown-menu dropdown-menu-end shadow p-2" style="width: 300px;">
-              <li>
-                <h6 class="dropdown-header">Investor Alerts</h6>
-              </li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item py-2 small text-wrap" href="#"><strong>Due Diligence Approved:</strong>
-                  Antwerp logistics room now open.</a></li>
-              <li><a class="dropdown-item py-2 small text-wrap" href="#"><strong>Upcoming Meeting:</strong> Marcus Vance
-                  call tomorrow at 10:30 AM.</a></li>
-            </ul>
-          </div>
           <!-- User Profile info -->
-          <div class="d-flex align-items-center">
+          <div class="d-none d-lg-flex align-items-center">
             <img src="assets/images/vance_avatar.png" class="rounded-circle border" alt="Acme Capital"
               style="width: 36px; height: 36px; object-fit: cover; object-position: center top;">
             <span class="ms-2 d-none d-md-inline font-weight-bold">Acme Capital</span>

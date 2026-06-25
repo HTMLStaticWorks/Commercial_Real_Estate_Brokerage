@@ -35,8 +35,14 @@
   direction: ltr !important;
 }
 
+[dir="rtl"] svg[viewBox="0 0 180 50"] path,
+[dir="rtl"] svg[viewBox="0 0 180 50"] line {
+  transform: translate(136px, 0);
+}
+
 [dir="rtl"] svg[viewBox="0 0 180 50"] text {
   direction: ltr !important;
+  transform: translate(-2px, 0);
 }
 
 
